@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <!-- boostrap css -->
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <!-- custom style -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- bootstrap js -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+</head>
+
+<body>
+
+    <div class="sidenav-wrapper">
+        <div class="logo-wrapper">
+            <a href="./dashboard.html"><img src="assets/images/logo/Logo.svg" alt=""></a>
+        </div>
+
+        <ul class="menu-option-wrapper">
+            <li class="menu-item-wrapper">
+                <a href="dashboard.html" class="menu-item">
+                    <span class="dashboard-bg"></span>
+                    <span class="dot"></span>
+                </a>
+            </li>
+            <li class="menu-item-wrapper">
+                <a href="all-user.html" class="menu-item">
+                    <span class="user-bg"></span>
+                    <span class="dot"></span>
+                </a>
+            </li>
+            <li class="menu-item-wrapper ">
+                <a href="listings.html" class="menu-item">
+                    <span class="list-bg"></span>
+                    <span class="dot"></span>
+                </a>
+            </li>
+            <li class="menu-item-wrapper ">
+                <a href="support.html" class="menu-item">
+                    <span class="support-bg"></span>
+                    <span class="dot"></span>
+                </a>
+            </li>
+            <li class="menu-item-wrapper active">
+                <a href="settings.html" class="menu-item">
+                    <span class="setting-bg"></span>
+                    <span class="dot"></span>
+                </a>
+            </li>
+        </ul>
+        <ul class="menu-option-wrapper logout-btn-wrapper">
+            <li class="menu-item-wrapper ">
+                <a href="#" class="menu-item">
+                    <span class="logout-bg"></span>
+                
+                </a>
+            </li>
+        </ul>
+    </div>
+
+
+    <div class="main-content-wrapper ">
+        <!-- Dashboard Top Menu Section -->
+        <div class="dashborad-top-menu-wrapper  d-flex justify-content-between">
+            <div class="welcome-msg-wrapper">
+                <h4 class="user-name">Settings</h4>
+            </div>
+            <div class="search-box-wrapper">
+                <ul class="search-box">
+                    <li>
+                        <input type="search" class="search-input input-field" placeholder="Search">
+                    </li>
+                    <li>
+                        <a href="#" class="notification-icon">
+                            <i class="fa fa-bell-o " aria-hidden="true"></i>
+                            <span class="dot"></span>
+                        </a>
+                    </li>
+                    <li>
+                    <a href="#" class="user-profile">
+                        <div class="profile-img">
+                            <img src="assets/images/user-profile.png" alt="" class="rounded-circle">
+                        </div>
+                        <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                    </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Dashboard Main Section -->
+        <section class="dashboard-status-card-wrapper">
+
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="dashboard-left-col">
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                              <a class="nav-link" href="./settings.html">Coupons</a>
+                            </li>
+                            <li class="nav-item nav-active">
+                              <a class="nav-link" href="./settings-faq.html">FAQ</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="./settings-legal.html">Legal</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="./settings-ad-banner.html">Ad Banners</a>
+                            </li>
+                          </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-10">
+                    <div class="dashboard-right-col" id="faq-page">
+
+                        <ul class="user-menu-wrapper">
+                            <div>
+                                <li class="menu-itme">
+                                    <a href="" class="menu active">
+                                    Show All
+                                    </a>
+                                </li>
+                                <li class="menu-itme ">
+                                    <a href="" class="menu ">
+                                    Transporters
+                                    </a>
+                                </li>
+                                <li class="menu-itme">
+                                    <a href="" class="menu">
+                                    About App
+                                    </a>
+                                </li>
+                                <li class="menu-itme">
+                                    <a href="" class="menu">
+                                    Sender
+                                    </a>
+                                </li>
+                            </div>
+                            <div id="add-btn">
+                                <button type="button" data-toggle="modal" data-target="#addCategory">Add New Category</button>
+                                <button type="button" data-toggle="modal" data-target="#addFaq">Add New FAQ</button>
+                            </div>
+                        </ul>
+
+                        <div class="status-card-wrapper">
+                            <div class="table-responsive-sm">          
+                                <table class="table" id="settings-table">
+                                    <thead class="thead-light">
+                                        <tr class="t-row">
+                                            <th class="tbl-head">Reorder</th>
+                                            <th class="tbl-head">Category</th>
+                                            <th class="tbl-head">Question</th>
+                                            <th class="tbl-head">Answer</th>
+                                            <th class="tbl-head">Status</th>
+                                            <th class="tbl-head">Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="tbl-data tbl-data-light" style="text-align: center;"><i class="fa fa-bars"></i></td>
+                                            <td class="tbl-data tbl-data-light">About App</td>
+                                            <td class="tbl-data">I’ve a feature request. Where Can I post it?</td>
+                                            <td class="tbl-data">
+                                                You can directly connect with Livo through help section and submit in your request. 
+                                                Our staff will accordingly share it with the concerned department.
+                                            </td>
+                                            <td class="tbl-data">
+                                                <label class="switch">
+                                                    <input type="checkbox">
+                                                    <span class="slider round"></span>
+                                                </label>
+                                            </td>
+                                            <td class="actions">
+                                                <a href="#"><img src="./assets/images/icons/Icon-feather-edit-3.svg" alt=""></a>
+                                                <a href="#"><img src="./assets/images/icons/Icon-feather-trash-2.svg" alt=""></a>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="tbl-data tbl-data-light" style="text-align: center;"><i class="fa fa-bars"></i></td>
+                                            <td class="tbl-data tbl-data-light">Transporters</td>
+                                            <td class="tbl-data">
+                                                Where should I signup to become a 
+                                                transporter?
+                                            </td>
+                                            <td class="tbl-data">
+                                                After you’ve completed your signup process successfully, then you can just go to your 
+                                                accounts page to submit your transporter application.
+                                            </td>
+                                            <td class="tbl-data">
+                                                <label class="switch">
+                                                    <input type="checkbox">
+                                                    <span class="slider round"></span>
+                                                </label>
+                                            </td>
+                                            <td class="actions">
+                                                <a href="#"><img src="./assets/images/icons/Icon-feather-edit-3.svg" alt=""></a>
+                                                <a href="#"><img src="./assets/images/icons/Icon-feather-trash-2.svg" alt=""></a>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="tbl-data tbl-data-light" style="text-align: center;"><i class="fa fa-bars"></i></td>
+                                            <td class="tbl-data tbl-data-light">Transporters</td>
+                                            <td class="tbl-data">
+                                                My transporter application was rejected, 
+                                                when can I apply again to ?
+                                            </td>
+                                            <td class="tbl-data">
+                                                Once your transporter application was reject then you’ll have to wait 4 weeks before 
+                                                you can submit your application again.
+                                            </td>
+                                            <td class="tbl-data">
+                                                <label class="switch">
+                                                    <input type="checkbox">
+                                                    <span class="slider round"></span>
+                                                </label>
+                                            </td>
+                                            <td class="actions">
+                                                <a href="#"><img src="./assets/images/icons/Icon-feather-edit-3.svg" alt=""></a>
+                                                <a href="#"><img src="./assets/images/icons/Icon-feather-trash-2.svg" alt=""></a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+<!-- Add Category Modal Start -->
+<div class="modal right fade user-modal-wrapper modal-pedding" id="addCategory" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+    
+            <div class="modal-header d-flex justify-content-between">
+                <div class="close-btn-werapper">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <!-- <i class="fa fa-arrow-left" aria-hidden="true"></i> -->
+                        <img src="./assets/images/icons/left-arrow.svg" alt="">
+                    </button>
+                </div>
+                <div class="suspend-btn-wrapper">
+                    <h1>Edit FAQ Categories</h1>
+                </div>
+            </div>
+    
+            <div class="modal-body">
+                <div class="edit-categories">
+                    <div class="cat-heading">
+                        <h1>Enter Category Name</h1>
+                        <h2>Keep it as short as possible</h2>
+                    </div>
+                    <div class="search-box-wrapper">
+                        <ul class="search-box">
+                            <li>
+                                <input type="search" class="search-input input-field" placeholder="Search">
+                            </li>
+                        </ul>
+                    </div>
+                    <button type="button" id="add-cat-btn">Add Category</button>
+                </div>
+
+                <ul class="cat-lists">
+                    <li class="cat-list-item">
+                        <div class="cat-name">
+                            <i class="fa fa-bars cat-icon-style"></i>
+                            <p>Transporters</p>
+                        </div>
+                        <div class="cat-actions">
+                            <a href="#"><img src="./assets/images/icons/Icon-feather-edit-3.svg" alt=""></a>
+                            <a href="#"><img src="./assets/images/icons/Icon-feather-trash-2.svg" alt=""></a>
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                    </li>
+
+                    <li class="cat-list-item">
+                        <div class="cat-name">
+                            <i class="fa fa-bars cat-icon-style"></i>
+                            <p>About App</p>
+                        </div>
+                        <div class="cat-actions">
+                            <a href="#"><img src="./assets/images/icons/Icon-feather-edit-3.svg" alt=""></a>
+                            <a href="#"><img src="./assets/images/icons/Icon-feather-trash-2.svg" alt=""></a>
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                    </li>
+
+                    <li class="cat-list-item">
+                        <div class="cat-name">
+                            <i class="fa fa-bars cat-icon-style"></i>
+                            <p>New User</p>
+                        </div>
+                        <div class="cat-actions">
+                            <a href="#"><img src="./assets/images/icons/Icon-feather-edit-3.svg" alt=""></a>
+                            <a href="#"><img src="./assets/images/icons/Icon-feather-trash-2.svg" alt=""></a>
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                    </li>
+
+                    <li class="cat-list-item">
+                        <div class="cat-name">
+                            <i class="fa fa-bars cat-icon-style"></i>
+                            <p>Sender</p>
+                        </div>
+                        <div class="cat-actions">
+                            <a href="#"><img src="./assets/images/icons/Icon-feather-edit-3.svg" alt=""></a>
+                            <a href="#"><img src="./assets/images/icons/Icon-feather-trash-2.svg" alt=""></a>
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" id="save-cat-btn">Save Categories</button>
+            </div>
+    
+        </div><!-- modal-content -->
+    </div><!-- modal-dialog -->
+</div>
+<!-- Add Category Modal End -->
+
+
+<!-- Add FAQ Modal Start -->
+<div class="modal right fade user-modal-wrapper modal-pedding" id="addFaq" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+  
+            <div class="modal-header d-flex justify-content-between">
+                <div class="close-btn-werapper">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <!-- <i class="fa fa-arrow-left" aria-hidden="true"></i> -->
+                        <img src="./assets/images/icons/left-arrow.svg" alt="">
+                    </button>
+                </div>
+                <div class="suspend-btn-wrapper">
+                    <h1>Add New Faq</h1>
+                </div>
+            </div>
+  
+            <div class="modal-body">
+                <div class="dropdown">
+                    <button type="button" class="dropdown-toggle" data-toggle="dropdown" id="drop-btn">
+                    Select Category
+                    <img src="./assets/images/icons/chevron-down.svg" alt="">
+                    </button>
+                    <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Category 1</a>
+                    <a class="dropdown-item" href="#">Category 2</a>
+                    <a class="dropdown-item" href="#">Category 3</a>
+                    </div>
+                </div>
+
+                <div class="faq-content">
+                    <label for="">Enter Question</label>
+                    <textarea class="faq-desc" placeholder="Lorem ipsum dolor sit amet consectetur adipisicing elit."></textarea>
+                </div>
+
+                <div class="faq-content">
+                    <label for="">Enter Answer</label>
+                    <textarea class="faq-desc" placeholder="Lorem ipsum dolor sit amet consectetur adipisicing elit."></textarea>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" id="add-faq-btn">Add New FAQ</button>
+            </div>
+  
+        </div><!-- modal-content -->
+    </div><!-- modal-dialog -->
+</div>
+<!-- Add FAQ Modal End -->
+
+</body>
+</html>

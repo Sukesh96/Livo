@@ -1,0 +1,431 @@
+.sender{
+    .driver-details, .vehicle-details{
+        display: flex;
+        .driver-image{
+            width: 178px !important;
+            height: 178px !important;
+            margin-right: 24px;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 10px;
+            }
+        }
+
+        .vehicle-image{
+            min-width: 181px !important;
+            height: 181px !important;
+            margin-right: 20px;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 10px;
+            }
+        }
+        
+
+        .driver-name{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            div{
+                h1{
+                    font-size: 14px !important;
+                    font-weight: bold;
+                    margin-bottom: 12px !important;
+                    color: rgba(0, 0, 0, 0.3);
+                }
+                h2{
+                    font-size: 16px;
+                    font-weight: bold;
+                }
+            }
+
+            .vehicle-info{
+                h2{
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
+
+.driver-content{
+    display: flex;
+    flex-direction: column;
+    // padding: 16px 32px 16px 16px;
+    .driver-info{
+        display: flex;
+        margin-bottom: 16px;
+        .dob-info, .email-info{
+            width: 50%;
+            margin-right: 12px;
+        }
+        h1{
+            font-size: 14px;
+            font-weight: bold;
+            color: rgba(0, 0, 0, 0.2);
+            margin-bottom: 4px;
+            
+        }
+        h2{
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 0.64px;
+            color: #000000;
+            span{
+                color: rgba(0, 0, 0, 0.2);
+            }
+        }
+        .stats{
+            padding-right: 48px;
+        }
+    }
+}
+
+
+.transport-app{
+    border-radius: 12px;
+    box-shadow: 0 4px 14px 0 rgba(56, 14, 121, 0.1);
+    background-color: #ffffff;
+
+    .select-option{
+        display: flex;
+        justify-content: space-between;
+        padding: 16px;
+        a{
+            border-radius: 5px;
+            background-color: rgba(0, 0, 0, 0.2);
+            font-size: 16px;
+            font-weight: bold;
+            color: #ffffff;
+            padding: 10px 42px 10px 42px;
+            width: 181px;
+            text-align: center;
+        }
+    }
+
+    .img-box{
+        height: 244px;
+        border-radius: 10px;
+        margin: 4px 16px 0px 16px;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        
+    }
+
+
+    .request{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 14px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        .request-details{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 50%;
+            
+            h1{ 
+                font-size: 16px;
+                font-weight: bold;
+                line-height: 1.5;
+                color: rgba(0, 0, 0, 0.2);
+            }
+            p{
+                font-size: 16px;
+                font-weight: bold;
+                line-height: 1.5;
+                color: #000000;
+            }
+        }
+        .request-details:first-child{
+            margin-right: 10px;
+        }
+        .request-details:first-child::after{
+            content: "";
+            background-color: rgba(0, 0, 0, 0.2);
+            width: 1px;
+            height: 24px;
+            display: block;
+        }
+    }
+
+    .product-info{
+        .sender{
+            padding: 19.5px 16px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+        .driver-content{
+            padding: 16px !important;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            .driver-info{
+                margin-bottom: 0;
+            }
+        }
+
+    }
+
+    .about-driver{
+        padding: 16px;
+        h1{
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 1.5;
+            color: rgba(0, 0, 0, 0.2);
+            margin-bottom: 8px;
+        }
+        p{
+            font-family: Barlow;
+            font-size: 16px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.5;
+            letter-spacing: normal;
+            text-align: left;
+            color: #000000;
+        }
+    }
+
+}
+
+
+
+@media screen and (max-width: 1900px){
+
+    // Column 2 Styling //
+    .user-details{
+        padding: 16px !important;
+        .driver-details{
+            .driver-image{
+                width: 140px !important;
+                height: 140px !important;
+                margin-right: 16px;
+            }
+            .driver-name{
+                div{
+                    h1{
+                        margin-bottom: 4px !important; 
+                    }
+                    h2{
+                        font-size: 0.875rem !important;
+                    }
+                }
+            }
+        }
+        .driver-content{
+            h2{
+                font-size: 0.875rem !important;
+            }
+        }
+    }
+    .status{
+        li{
+            font-size: 0.875rem !important;
+        }
+        .circle::after{
+            top: 28px !important;
+        }
+    }
+
+
+    // Column 3 Styling //
+    .transport-app{
+        .select-option{
+            a{
+                font-size: 0.875rem;
+                width: 130px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+        .request{
+            h1, p{
+                font-size: 0.875rem !important;
+            }
+        }
+        .product-info{
+            .vehicle-details{
+                .vehicle-image{
+                    min-width: 140px !important;
+                    max-width: 140px !important;
+                    height: 140px !important;
+                    margin-right: 10px;
+                }
+
+                .vehicle-info{
+                    margin-bottom: 4px ;
+                    h1{
+                        margin-bottom: 4px !important;
+                        font-size: 0.75rem !important;
+                    }
+                    h2{
+                        font-size: 0.875rem !important;
+                    }
+                }
+            }
+            .driver-content{
+                .dob-info{
+                    width: 55%;
+                    margin-right: 10px;
+                }
+                h1{
+                    font-size: 0.75rem !important;
+                }
+                h2{
+                    font-size: 0.875rem !important;
+                }
+            }
+        }
+        .about-driver{
+            h1, p{
+                font-size: 0.875rem !important;
+            }
+            
+        }
+    }
+
+
+    // Column 4 Styling //
+    .pre-order-message-wrapper{
+        .msg-type-box-wrapper{
+            .input-type-box{
+                height: 80px !important;
+                padding: 16px !important;
+                input{
+                    height: 45px !important;
+                }
+                label{
+                    width: 45px !important;
+                    height: 45px !important;
+                    i{
+                        font-size: 18px !important;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 1530px){
+
+    // Column 2 Styling //
+    .user-details{
+        .driver-details{
+            .driver-image {
+                width: 120px !important;
+                height: 120px !important;
+            }
+            .driver-name{
+                div{
+                    h1{
+                        font-size: 0.75rem !important; 
+                    }
+                    h2{
+                        font-size: 0.8rem !important;
+                    }
+                }
+            }
+        } 
+        .driver-content{
+            h1{
+                font-size: 0.75rem !important; 
+            }
+            h2{
+                font-size: 0.8rem !important;
+            }
+        }
+    }
+    .status li {
+        font-size: 0.8rem !important;
+    } 
+
+
+    // Column 3 Styling //
+    .transport-app{
+        .select-option{
+            padding: 12px;
+            a{
+                font-size: 0.8rem;
+                width: 45%;
+            }
+        }
+        .img-box{
+            height: 200px;
+            margin: 4px 12px 0px 12px;
+        }
+        .request{
+            padding: 12px;
+            h1, p{
+                font-size: 0.7rem !important;
+            }
+        }
+        .product-info{
+            .sender{
+                padding: 12px;
+            }
+            .vehicle-details{
+                .vehicle-image{
+                    min-width: 120px !important;
+                    max-width: 120px !important;
+                    height: 120px !important;
+                    margin-right: 10px;
+                }
+
+                .driver-name{
+                    width: 100%;
+                }
+                .vehicle-info{
+                    margin-bottom: 6px ;
+                    h1{
+                        font-size: 0.7rem !important;
+                    }
+                    h2{
+                        font-size: 0.8rem !important;
+                    }
+                }
+            }
+            .driver-content{
+                padding: 12px !important;
+                h1{
+                    font-size: 0.65rem !important;
+                }
+                h2{
+                    font-size: 0.7rem !important;
+                }
+            }
+        }
+        .about-driver{
+            h1, p{
+                font-size: 0.75rem !important;
+            }
+            
+        }
+    }
+
+}
+
+
+@media screen and (max-width: 1200px){
+    .transporter-request-wrapper{
+        .item-wrapper{
+            height: auto !important;
+        }
+    }
+}
+
+
+

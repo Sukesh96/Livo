@@ -1,0 +1,238 @@
+
+
+body {
+    
+    margin: 0;
+    overflow-x: hidden;
+    width: 100%;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    font-family: $font-family;
+  
+    
+}
+*{
+    font-family: $font-family;
+}
+h1,h2,h3,h4,p,span,a,div{
+    margin:0px;
+}
+a{
+    &:hover{
+        text-decoration: none;
+    }
+}
+.p-0{
+    padding: 0px;
+}
+* ,:focus, button:focus  {
+    outline: -webkit-focus-ring-color auto 0px;
+    outline: none;
+}
+
+header,
+footer,
+section {
+    display: block;
+}
+
+ul {
+    list-style: none;
+    margin-bottom: 0px;
+    padding-left: 0px;
+    li {
+        display: inline-block;
+        a {
+            text-decoration: none;
+        }
+    }
+}
+
+button{
+    cursor: pointer;
+}
+
+.form-group{
+    margin-bottom: 0 !important;
+}
+
+input[readonly] {
+    background-color: #f6f6f6 !important;
+}
+
+
+    label{
+     
+        font-size: 16px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: left;
+        color: #b3b3b3;
+    }
+    .input-field{
+        padding: 10px;
+        border: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        font-size: 16px;
+        font-weight: 600;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: left;
+        color: #000000;
+    }
+
+    ::-webkit-input-placeholder { /* Edge */
+       
+        font-size: 16px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.25;
+        letter-spacing: normal;
+        text-align: left;
+        color: rgba(0, 0, 0, 0.2);
+      }
+      
+      :-ms-input-placeholder { /* Internet Explorer 10-11 */
+        width: 51px;
+  height: 16px;
+  
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.25;
+  letter-spacing: normal;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.2);
+      }
+      
+      ::placeholder {
+        
+      
+        font-size: 16px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.25;
+        letter-spacing: normal;
+        text-align: left;
+        color: rgba(0, 0, 0, 0.2);
+      }
+
+.login-btn{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21px;
+    background-color: #F21C47;
+    transition: 0.3s;
+    &:hover{
+        background-color: #f21c47d4;
+    }
+}
+
+.date-filte-wrapper{
+    float: right;
+    margin-right: 16px;
+    span{
+       margin: 0 6px;
+        font-size: 16px;
+        font-weight: 600;
+        color: rgba(0, 0, 0, 0.3);
+    }
+    .textbox-n{
+        border: none;
+        padding:5px 10px;
+        border-radius: 22px !important;
+        background-color: #fafafc !important;
+        width: 100px;
+        height: 44px;
+        text-align: center;
+        font-family: Barlow;
+        font-size: 16px;
+        font-weight: 600;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.25;
+        letter-spacing: normal;
+        color: rgba(0, 0, 0, 0.3);
+      
+        &::placeholder{
+            text-align: center;
+            
+        }
+        &:focus{
+            box-shadow: none;
+        }
+    }
+}
+
+.border-r-10{
+ border-radius: 10px;   
+}
+
+
+
+
+// Date Picker Button Style //
+.date-picker-btn{
+    input{
+        width: 100%;
+        background-color: #ffffff !important;
+        font-size: 12.8px;
+        font-weight: bold;
+        color: rgba(0, 0, 0, 0.3);
+        padding: 8px;
+        box-shadow: none;
+        // cursor: pointer;
+        &:focus{
+            box-shadow: none;
+            outline:0;
+        }
+    }
+}
+
+
+// Star Rating Style Start //
+.starrating{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: flex-end;
+    
+    > input{
+        display: none;  /* Remove radio buttons */
+
+        &:hover ~ label{
+            color: #ffc107; 
+            cursor: pointer; 
+            transition: 0.4s;
+        }
+        &:checked ~ label{
+            color: #ffc107;  /* Set yellow color when star checked */
+        }
+    }
+    
+   
+    > label{
+        color: #ebebeb;  /* Start color when not clicked */
+        margin-bottom: 0;
+
+        &:before{
+            content: "\f005"; /* Star */
+            margin: 2px;
+            font-size: 14.8px;
+            font-family: FontAwesome;
+            display: inline-block; 
+        }
+    }
+}
+// Star Rating Style End //

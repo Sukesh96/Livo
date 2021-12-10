@@ -1,0 +1,39 @@
+
+// Merge all stylesheets into one
+
+// font family
+@import'../fonts/fonts';
+// Global
+@import'./base/variable';
+
+@import'./base/global';
+
+@import'./layout/modal';
+
+@import'./layout/nav';
+
+@import'./layout/sidebar';
+
+@import'pages/index';
+
+@import'pages/dashboard';
+
+@import'pages/user';
+
+@import'pages/list';
+
+@import'pages/support';
+
+@import'pages/support-transporter-request';
+
+@import'pages/settings';
+
+@import'pages/settings-faq';
+
+@import'pages/settings-legal';
+
+@import'pages/settings-ad-banner';
+
+
+
+

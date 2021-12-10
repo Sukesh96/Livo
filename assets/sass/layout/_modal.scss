@@ -1,0 +1,300 @@
+/*Modal Start*/
+.modal.right .modal-dialog {
+    position: fixed;
+    margin: auto;
+    width: 452px;
+    height: 100%;
+    -webkit-transform: translate3d(0%, 0, 0);
+        -ms-transform: translate3d(0%, 0, 0);
+         -o-transform: translate3d(0%, 0, 0);
+            transform: translate3d(0%, 0, 0);
+}
+
+
+.modal.right .modal-content {
+    height: 100%;
+    overflow-y: auto;
+}
+
+
+/*Right*/
+.modal.right.fade .modal-dialog {
+    right: 0px;
+    -webkit-transition: opacity 0.3s linear, right 0.3s ease-out;
+       -moz-transition: opacity 0.3s linear, right 0.3s ease-out;
+         -o-transition: opacity 0.3s linear, right 0.3s ease-out;
+            transition: opacity 0.3s linear, right 0.3s ease-out;
+}
+
+.modal.right.fade.in .modal-dialog {
+    right: 0;
+}
+
+
+.modal-pedding{
+    .modal-dialog{
+        .modal-content{
+            padding: 25px 30px 30px 25px;
+            border-radius: 0px;
+            .modal-header{
+                padding: 0px;
+                margin-bottom: 24px;
+                border: none;
+                align-items: center;
+                .close-btn-werapper{
+                    button{
+                        padding: 13px 13px 13px 0;
+                        color: #000;
+                        opacity: 1;
+                        
+                        // i{
+    
+                        // }
+                    }
+                }
+                .suspend-btn-wrapper{
+                    button{
+                        padding: 9px 19px;
+                        border-radius: 5px;
+                        background-color: rgba(0, 0, 0, 0.2);
+                        margin-right: 16px;
+                        font-weight: bold;
+                        border: none;
+                        color: #ffffff;
+                        &:last-child{
+                            margin-right: 0px;
+                        }
+                    }
+                }
+            }
+            .modal-body{
+                padding: 0px;
+            }
+        }
+    }
+}
+/*Modal End*/
+
+
+/* User Card Modal Start */
+.user-modal-wrapper{
+    .modal-dialog{
+        .modal-content{
+           
+            .modal-body{
+                padding: 0px;
+                .user-info-wrapper{
+                    .profile-wrapper{
+                        margin-right: 20px;
+                        img{
+                            width: 128px;
+                            height: 128px;
+                            overflow: hidden;
+                            object-fit: cover;
+                            border-radius: 10px;
+                        }
+                    }
+                    .contant-wrapper{
+                        width: 100%;
+                        h6{
+                            span{
+                                &:first-child{
+                                   font-size: 20px;
+                                   color: #000000;
+                                   font-weight: bold;
+                                }
+                                &:last-child{
+                                    font-size: 12.8px;
+                                    font-weight: bold;
+                                    color: rgba(0, 0, 0, 0.3);
+                                    float: right;
+                                    display: flex;
+                                    align-items: center;
+                                    i{
+                                        width: 6px;
+                                        height: 6px;
+                                        background-color: rgba(0, 0, 0, 0.3);
+                                        display: block;
+                                        border-radius: 50%;
+                                        margin-right: 5px;
+                                    
+                                    }
+                                   
+                                }
+                            }
+                            span.online{
+                                color: #00c853;
+                                i{
+                                    background-color: #00c853;
+                                }
+                            }
+                        }
+                    }
+                }
+                .user-form-info-wrapper{
+                    margin-top: 29px;
+                    label{ 
+                        font-size: 12.8px !important;  
+                        font-weight: bold;
+                        color: rgba(0, 0, 0, 0.3);
+                        margin: 0;
+                        margin-bottom: 12px;
+                    }
+
+                    .input-field{
+                        font-size: 16px;
+                        font-weight: 600;
+                        color:$primary-text-color;
+                        padding: 0px 7px 7px 0;
+                        margin-bottom: 22.5px;
+                    }
+                }
+                .user-product-list-wrapper{
+                    .nav-tabs{ 
+                        margin-bottom: 18px;
+                        border: none;
+                        .nav-item{
+                            margin-right:23px;
+                            .nav-link{
+                                font-size: 16px;
+                                font-weight: bold;
+                                color: rgba(0, 0, 0, 0.3);
+                                padding: 0px;
+                                border: none;
+                                transition: 0.3s;
+                            }
+                            .nav-link.active{
+                                color: #000000;
+                                &::after{
+                                    content: "";
+                                    border-bottom: 3px solid $pink-color;
+                                    width: 30px;
+                                    display: block;
+                                    margin: 0 auto;
+                                    margin-top: 5px;
+                                    transition: 0.3s;
+                                }
+                              
+                            }
+                        }
+                        
+                    }
+                    .tab-content{
+                        border: none;
+                        .search-box-wrapper{
+                            margin-bottom: 18px;
+                            .search-box{
+                                li{
+                                    .search-input{
+                                        max-width: 383px;
+                                        margin: auto;
+                                    }
+                                }
+                            }
+                        }
+                        .product-card-wrapper{
+                            // padding-bottom: 50px;
+                            .procut-card{
+                                padding: 12px;
+                                border: solid 1px rgba(0, 0, 0, 0.1);
+                                background-color: #ffffff;
+                                margin-bottom: 20px;
+                                border-radius: 12px;
+                                .procut-img-wrapper{ 
+                                    margin-right: 20px;
+                                    img{
+                                        width: 80px;
+                                        height: 80px;
+                                       object-fit: cover;
+                                       overflow: hidden;
+                                        border-radius: 10px;
+                                    }
+                                }
+                                .product-name-wrapper{
+                                    width: 100%;
+                                    h4{
+                                        font-size: 16px;
+                                        font-weight: 600;
+                                        color: #000000;
+                                        margin-bottom: 12px;
+                                    }
+                                    button{
+                                        border-radius: 12px;
+                                        background-color: rgba(0, 0, 0, 0.2);
+                                        border: none;
+                                        display: flex;
+                                        align-items:  center;
+                                        padding: 10px;
+                                        width: 100%;
+                                        img{
+                                            width: 28px;
+                                            height: 28px;
+                                            overflow: hidden;
+                                            object-fit: cover;
+                                            border: solid 2px #ffffff;
+                                            border-radius: 50%;
+                                            margin-right: 12px;
+                                        }
+
+                                        span{
+                                        font-size: 16px;
+                                        font-weight: bold;
+                                        color: #ffffff;
+                                        }
+                                    }
+                                    button.btn-green{
+                                        background-color: $green-color;
+                                    }
+                                    button.btn-light-blue{
+                                        background-color: #2196f3;
+                                    }
+                                }
+                            }
+                        }
+                        .modal-download-btn-wrapper{
+                            // position: fixed;
+                            
+                            // bottom: 1px;
+                            // max-width: 100%;
+                            // width: 100%;
+                            // margin: auto;
+                            // background: #fff;
+                            
+                            // padding-bottom: 20px;
+                            .btn-wrapper{
+                                button{
+                                    height: 48px;
+                                    padding: 14px 11px;
+                                    text-align: center;
+                                    width: 100%;
+                                    max-width: 383px;
+                                    border-radius: 5px;
+                                    background-color: #f21c47;
+                                    border: none;
+                                     font-size: 16px;
+                                    font-weight: bold;
+                                    color: #ffffff;  
+
+
+
+                                }
+                            }
+                            
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+/* User Card Modal End */
+
+
+// product modal
+// .product-modal-wrapper{
+    
+// }
+
+

@@ -1,0 +1,35 @@
+.site-nav-header-wrapper{
+    height: 64px;
+    min-height: 64px;
+    background-color: aliceblue;    
+    overflow: hidden;
+    nav{
+        height: 64px;
+        .brand-logo-wrapper{
+            a{
+                display: block;
+                img{
+                    width: 48px;
+                    height: 30px;
+                    // object-fit: cover;
+                    // overflow: hidden;
+                }
+            }
+        }
+    }
+}
+
+.breadcrumb-wrapper{
+    .breadcrumb{
+        background-color: transparent;
+        .breadcrumb-item , .breadcrumb-item a{
+            font-size: 16px;
+            font-weight: 500;
+            color: rgba(0, 0, 0, 0.3);
+        }
+    }
+}
+.breadcrumb-item + .breadcrumb-item::before{
+    content: ">" !important;
+    color: rgba(0, 0, 0, 0.3);
+}

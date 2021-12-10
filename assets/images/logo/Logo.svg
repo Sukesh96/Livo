@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="47.25" height="29.933" viewBox="0 0 47.25 29.933">
+    <defs>
+        <style>
+            .cls-1{fill:#380e79}.cls-2{fill:#f21c47}
+        </style>
+    </defs>
+    <g id="Logo">
+        <g id="Layer_1">
+            <path id="Path_1851" d="M78.1 47.52l14.573 4.3-9.92 11.376z" class="cls-1" transform="translate(-71.95 -43.778)"/>
+            <path id="Path_1852" d="M8 53.755H0l6.15-6.235z" class="cls-2" transform="translate(0 -43.778)"/>
+            <path id="Path_1853" d="M183.68 181.068l16.274 8.5a1.8 1.8 0 0 0 2.415-2.489l-7.4-13.567z" class="cls-1" transform="translate(-169.215 -159.846)"/>
+            <path id="Path_1854" d="M158.626 0l-21.235 21.533a8.746 8.746 0 0 1-10.857 1.449l-4.715-3.482a1.914 1.914 0 0 1-.453-2.893l13.1-13.29A11.142 11.142 0 0 1 142.4 0z" class="cls-2" transform="translate(-111.376)"/>
+        </g>
+    </g>
+</svg>

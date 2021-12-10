@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Messenger</title>
+    
+    <!-- boostrap css -->
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <!-- custom style -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+    crossorigin="anonymous" />
+    <!-- bootstrap js -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    
+
+</head>
+
+<body>
+
+    <!-- Side Navbar Start-->
+    <div class="sidenav-wrapper">
+        <div class="logo-wrapper">
+            <a href="./dashboard.html"><img src="assets/images/logo/Logo.svg" alt=""></a>
+        </div>
+
+        <ul class="menu-option-wrapper">
+            <li class="menu-item-wrapper ">
+                <a href="dashboard.html" class="menu-item">
+                    <span class="dashboard-bg"></span>
+                    <span class="dot"></span>
+                </a>
+            </li>
+            <li class="menu-item-wrapper">
+                <a href="all-user.html" class="menu-item">
+                    <span class="user-bg"></span>
+                    <span class="dot"></span>
+                </a>
+            </li>
+            <li class="menu-item-wrapper ">
+                <a href="listings.html" class="menu-item">
+                    <span class="list-bg"></span>
+                    <span class="dot"></span>
+                </a>
+            </li>
+            <li class="menu-item-wrapper active">
+                <a href="support.html" class="menu-item">
+                    <span class="support-bg"></span>
+                    <span class="dot"></span>
+                </a>
+            </li>
+            <li class="menu-item-wrapper ">
+                <a href="settings.html" class="menu-item">
+                    <span class="setting-bg"></span>
+                    <span class="dot"></span>
+                </a>
+            </li>
+        </ul>
+        <ul class="menu-option-wrapper logout-btn-wrapper">
+            <li class="menu-item-wrapper ">
+                <a href="#" class="menu-item">
+                    <span class="logout-bg"></span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- Side Navbar End -->
+
+
+    <div class="main-content-wrapper ">
+        <div class="dashborad-top-menu-wrapper  d-flex justify-content-between">
+            <section class="dashboard-status-card-wrapper ">
+                <div class="row">
+                    <div class="col-md-12 pr-0">
+                        <ul class="user-menu-wrapper">
+                            <li class="menu-itme">
+                                <a href="./support.html" class="menu active">
+                                    Show All
+                                </a>
+                            </li>
+                            <li class="menu-itme ">
+                                <a href="ongoing.html" class="menu ">
+                                    Pending
+                                </a>
+                            </li>
+                            <li class="menu-itme">
+                                <a href="completed.html" class="menu">
+                                    Processing
+                                </a>
+                            </li>
+                            <li class="menu-itme">
+                                <a href="completed.html" class="menu">
+                                    Resolved
+                                </a>
+                            </li>
+                            <li class="menu-itme">
+                                <a href="completed.html" class="menu">
+                                    Failed Only
+                                </a>
+                            </li>
+                            <li class="menu-itme" id="transporter-menu">
+                                <a href="./support-transporter-request.html" class="menu">
+                                    Transporter Request
+                                </a>
+                            </li>
+                        </ul>                        
+                    </div>
+                </div>
+            </section>
+
+            <div class="search-box-wrapper">
+                <ul class="search-box">
+
+                    <div class="form-group" id="user-drop-btn">
+                        <p>User</p>
+                        <div class="drop-btn" id="user-btn">
+                            <div class="select-btn new-ticket">
+                                <div class="btn__trigger">All</div>
+                                <div class="btn-options">
+                                    <span class="btn-option" data-value="All">All</span>
+                                    <span class="btn-option" data-value="Sender">Sender</span>
+                                    <span class="btn-option" data-value="Transporter">Transporter</span>
+                                </div>
+                                <img src="./assets/images/icons/chevron-down-black.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <li>
+                        <a href="#" class="notification-icon">
+                            <i class="fa fa-bell-o " aria-hidden="true"></i>
+                            <span class="dot"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="user-profile">
+                            <div class="profile-img">
+                                <img src="assets/images/user-profile.png" alt="" class="rounded-circle">
+                            </div>
+                            <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+
+        <div class="dashboard-support-list">
+            <div class="row">
+                <!-- Column 1 -->
+                <div class="col-md-3 col-lg-3">
+                    <h1 class="support-ticket-heading">Support Tickets</h1>
+                    
+                    <div class="support-tickets custom-h over-flow-scroll">
+                        <ul class="support-ticket-list">
+
+                            <li class="support-ticket-list-item">
+                                <div class="ticket-details">
+                                    <div class="ticket-no">
+                                        <h1>Ticket No.</h1>
+                                        <h2>#126</h2>
+                                    </div>
+                                    <p>21st Sept. 2020 at 09:30pm</p>
+                                </div>
+
+                                <div class="category-details">
+                                    <div class="category-desc">
+                                        <h1>Category</h1>
+                                        <h2>Issues with Listing</h2>
+                                    </div>
+
+                                    <div class="select-wrapper">
+                                        <div class="select">
+                                            <div class="select__trigger">Escalated
+                                                <!-- <div class="arrow"></div> -->
+                                            </div>
+                                            <div class="options">
+                                                <span class="option selected" data-value="Escalated">Escalated</span>
+                                                <span class="option" data-value="Pending">Pending</span>
+                                                <span class="option" data-value="Failed">Failed</span>
+                                                <span class="option" data-value="Resolved">Resolved</span>
+                                            </div>
+                                            <img src="./assets/images/icons/chevron-down.svg" alt="">
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+                            </li>
+
+                            <li class="support-ticket-list-item">
+                                <div class="ticket-details">
+                                    <div class="ticket-no">
+                                        <h1>Ticket No.</h1>
+                                        <h2>#126</h2>
+                                    </div>
+                                    <p>21st Sept. 2020 at 09:30pm</p>
+                                </div>
+
+                                <div class="category-details">
+                                    <div class="category-desc">
+                                        <h1>Category</h1>
+                                        <h2>Issues with Listing</h2>
+                                    </div>
+                                    <div class="select-wrapper">
+                                        <div class="select">
+                                            <div class="select__trigger">Escalated
+                                                <!-- <div class="arrow"></div> -->
+                                            </div>
+                                            <div class="options">
+                                                <span class="option selected" data-value="Escalated">Escalated</span>
+                                                <span class="option" data-value="Pending">Pending</span>
+                                                <span class="option" data-value="Failed">Failed</span>
+                                                <span class="option" data-value="Resolved">Resolved</span>
+                                            </div>
+                                            <img src="./assets/images/icons/chevron-down.svg" alt="">
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+
+                                <!-- <div class="category-details">
+                                    <div class="category-desc">
+                                        <h1>Description</h1>
+                                    </div>
+                                </div> -->
+                                
+                            </li>
+
+                            <li class="support-ticket-list-item">
+                                <div class="ticket-details">
+                                    <div class="ticket-no">
+                                        <h1>Ticket No.</h1>
+                                        <h2>#126</h2>
+                                    </div>
+                                    <p>21st Sept. 2020 at 09:30pm</p>
+                                </div>
+
+                                <div class="category-details">
+                                    <div class="category-desc">
+                                        <h1>Category</h1>
+                                        <h2>Issues with Listing</h2>
+                                    </div>
+                                    <div class="select-wrapper">
+                                        <div class="select">
+                                            <div class="select__trigger">Escalated
+                                                <!-- <div class="arrow"></div> -->
+                                            </div>
+                                            <div class="options">
+                                                <span class="option selected" data-value="Escalated">Escalated</span>
+                                                <span class="option" data-value="Pending">Pending</span>
+                                                <span class="option" data-value="Failed">Failed</span>
+                                                <span class="option" data-value="Resolved">Resolved</span>
+                                            </div>
+                                            <img src="./assets/images/icons/chevron-down.svg" alt="">
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="support-ticket-list-item">
+                                <div class="ticket-details">
+                                    <div class="ticket-no">
+                                        <h1>Ticket No.</h1>
+                                        <h2>#126</h2>
+                                    </div>
+                                    <p>21st Sept. 2020 at 09:30pm</p>
+                                </div>
+
+                                <div class="category-details">
+                                    <div class="category-desc">
+                                        <h1>Category</h1>
+                                        <h2>Issues with Listing</h2>
+                                    </div>
+                                    <div class="select-wrapper">
+                                        <div class="select">
+                                            <div class="select__trigger">Escalated
+                                                <!-- <div class="arrow"></div> -->
+                                            </div>
+                                            <div class="options">
+                                                <span class="option selected" data-value="Escalated">Escalated</span>
+                                                <span class="option" data-value="Pending">Pending</span>
+                                                <span class="option" data-value="Failed">Failed</span>
+                                                <span class="option" data-value="Resolved">Resolved</span>
+                                            </div>
+                                            <img src="./assets/images/icons/chevron-down.svg" alt="">
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="support-ticket-list-item">
+                                <div class="ticket-details">
+                                    <div class="ticket-no">
+                                        <h1>Ticket No.</h1>
+                                        <h2>#126</h2>
+                                    </div>
+                                    <p>21st Sept. 2020 at 09:30pm</p>
+                                </div>
+
+                                <div class="category-details">
+                                    <div class="category-desc">
+                                        <h1>Category</h1>
+                                        <h2>Issues with Listing</h2>
+                                    </div>
+                                    <div class="select-wrapper">
+                                        <div class="select">
+                                            <div class="select__trigger">Escalated
+                                                <!-- <div class="arrow"></div> -->
+                                            </div>
+                                            <div class="options">
+                                                <span class="option selected" data-value="Escalated">Escalated</span>
+                                                <span class="option" data-value="Pending">Pending</span>
+                                                <span class="option" data-value="Failed">Failed</span>
+                                                <span class="option" data-value="Resolved">Resolved</span>
+                                            </div>
+                                            <img src="./assets/images/icons/chevron-down.svg" alt="">
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="support-ticket-list-item">
+                                <div class="ticket-details">
+                                    <div class="ticket-no">
+                                        <h1>Ticket No.</h1>
+                                        <h2>#126</h2>
+                                    </div>
+                                    <p>21st Sept. 2020 at 09:30pm</p>
+                                </div>
+
+                                <div class="category-details">
+                                    <div class="category-desc">
+                                        <h1>Category</h1>
+                                        <h2>Issues with Listing</h2>
+                                    </div>
+                                    <div class="select-wrapper">
+                                        <div class="select">
+                                            <div class="select__trigger">Escalated
+                                                <!-- <div class="arrow"></div> -->
+                                            </div>
+                                            <div class="options">
+                                                <span class="option selected" data-value="Escalated">Escalated</span>
+                                                <span class="option" data-value="Pending">Pending</span>
+                                                <span class="option" data-value="Failed">Failed</span>
+                                                <span class="option" data-value="Resolved">Resolved</span>
+                                            </div>
+                                            <img src="./assets/images/icons/chevron-down.svg" alt="">
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="support-ticket-list-item">
+                                <div class="ticket-details">
+                                    <div class="ticket-no">
+                                        <h1>Ticket No.</h1>
+                                        <h2>#126</h2>
+                                    </div>
+                                    <p>21st Sept. 2020 at 09:30pm</p>
+                                </div>
+
+                                <div class="category-details">
+                                    <div class="category-desc">
+                                        <h1>Category</h1>
+                                        <h2>Issues with Listing</h2>
+                                    </div>
+                                    <div class="select-wrapper">
+                                        <div class="select">
+                                            <div class="select__trigger">Escalated
+                                                <!-- <div class="arrow"></div> -->
+                                            </div>
+                                            <div class="options">
+                                                <span class="option selected" data-value="Escalated">Escalated</span>
+                                                <span class="option" data-value="Pending">Pending</span>
+                                                <span class="option" data-value="Failed">Failed</span>
+                                                <span class="option" data-value="Resolved">Resolved</span>
+                                            </div>
+                                            <img src="./assets/images/icons/chevron-down.svg" alt="">
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="support-ticket-list-item">
+                                <div class="ticket-details">
+                                    <div class="ticket-no">
+                                        <h1>Ticket No.</h1>
+                                        <h2>#126</h2>
+                                    </div>
+                                    <p>21st Sept. 2020 at 09:30pm</p>
+                                </div>
+
+                                <div class="category-details">
+                                    <div class="category-desc">
+                                        <h1>Category</h1>
+                                        <h2>Issues with Listing</h2>
+                                    </div>
+                                    <div class="select-wrapper">
+                                        <div class="select">
+                                            <div class="select__trigger">Escalated
+                                                <!-- <div class="arrow"></div> -->
+                                            </div>
+                                            <div class="options">
+                                                <span class="option selected" data-value="Escalated">Escalated</span>
+                                                <span class="option" data-value="Pending">Pending</span>
+                                                <span class="option" data-value="Failed">Failed</span>
+                                                <span class="option" data-value="Resolved">Resolved</span>
+                                            </div>
+                                            <img src="./assets/images/icons/chevron-down.svg" alt="">
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </li>
+                            
+
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Column 2 -->
+                <div class="col-md-3 col-lg-3">
+                    <h1 class="user-details-heading">User Details</h1>
+                    <div class="user-detail-column custom-h over-flow-scroll">
+                        <div class="user-details">
+                            <div class="sender">
+                                <h1>Sender</h1>
+                                <div class="sender-details">
+                                    <div class="sender-image">
+                                        <img src="./assets/images/Rectangle5090.png" alt="">
+                                    </div>
+                                   
+                                    <div class="sender-content">
+
+                                        <div class="sender-name">
+                                            <h1>Name & Details</h1>
+                                            <h2>Isabel Schumm</h2>
+                                        </div>
+                                        <div class="sender-date">
+                                            <div class="date">
+                                                <h1>Signup Date</h1>
+                                                <h2>12th Jun, 20</h2>
+                                            </div>
+                                            <div class="sender-status">
+                                                <h1>Listings sent</h1>
+                                                <h2>200</h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="transporter">
+                                <h1>Transporter</h1>
+                                <div class="sender-details">
+                                    <div class="sender-image">
+                                        <img src="./assets/images/Rectangle5067.png" alt="">
+                                    </div>
+                                    
+                                    <div class="sender-content">
+
+                                        <div class="sender-name">
+                                            <h1>Name & Details</h1>
+                                            <h2>Isabel Schumm</h2>
+                                        </div>
+                                        <div class="sender-date">
+                                            <div class="date">
+                                                <h1>Signup Date</h1>
+                                                <h2>12th Jun, 20</h2>
+                                            </div>
+                                            <div class="sender-status">
+                                                <h1>Listings sent</h1>
+                                                <h2>200</h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                       
+                   
+                        <h1 class="status-heading">Status</h1>
+                        <div class="status">
+                            <ul class="status-list">
+                                <li class="status-list-item selected">
+                                    <div class="circle">
+                                        <div class="dot"></div>
+                                    </div>
+                                    Transporter Selected
+                                </li>
+
+                                <li class="status-list-item approved">
+                                    <div class="circle">
+                                        <div class="dot"></div>
+                                    </div>
+                                    Transporter Approved
+                                </li>
+
+                                <li class="status-list-item">
+                                    <div class="circle">
+                                        <div class="dot"></div>
+                                    </div>
+                                    Item Picked Up
+                                </li>
+
+                                <li class="status-list-item">
+                                    <div class="circle">
+                                        <div class="dot"></div>
+                                    </div>
+                                    Item Dropped Off
+                                </li>
+
+                                <li class="status-list-item">
+                                    <div class="circle">
+                                        <div class="dot"></div>
+                                    </div>
+                                    Sender paid Transporter
+                                </li>
+
+                                <li class="status-list-item">
+                                    <div class="circle">
+                                        <div class="dot"></div>
+                                    </div>
+                                    Listing Completed
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 3-->
+                <div class=" col-md-3 col-lg-3">
+                    <h1 class="listing-details-heading">Listing Details</h1>
+                    <div>
+                    <div class="listing-details custom-h over-flow-scroll">
+                        
+                        <!-- Product Image Detail Wrapper-->
+                        <div class="product-img-detail-wraper">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="img-slide-wrapper">
+                                        <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
+                                            <ol class="carousel-indicators">
+                                                <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
+                                                <li data-target="#carouselIndicators" data-slide-to="1"></li>
+                                            </ol>
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active">
+                                                    <img class="d-block w-100 border-r-10" src="assets/images/product-img/Rectangle-5108.png" alt="First slide">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img class="d-block w-100 border-r-10" src="assets/images/product-img/Rectangle-5108.png" alt="Second slide">
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="row product-detail-row">
+                                        <div class="col-md-12">
+                                            <div class="product-title">
+                                                <p>Product Name & Details</p>
+                                                <h1>Speaker with Plants</h1>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-12">
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <div class="product-specs">
+                                                        <div class="product-height">
+                                                            <p class="prod-spec-title">Height</p>
+                                                            <h1 class="prod-spec-detail">27 cm</h1>
+                                                        </div>
+                                                        <div class="product-width">
+                                                            <p class="prod-spec-title">Width</p>
+                                                            <h1 class="prod-spec-detail">27 cm</h1>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <div class="product-specs">
+                                                        <div class="product-depth">
+                                                            <p class="prod-spec-title">Depth</p>
+                                                            <h1 class="prod-spec-detail">27 cm</h1>
+                                                        </div>
+                                                        <div class="product-weight">
+                                                            <p class="prod-spec-title">Weight</p>
+                                                            <h1 class="prod-spec-detail">27 Kgs</h1>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <div class="product-need">
+                                        <p>2 People Needed</p>
+                                        <label class="switch">
+                                            <input type="checkbox">
+                                            <span class="slider round"></span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Product Pickup Address Wrapper -->
+                        <div class="product-pickup-address-wrapper">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="pickup-address">
+                                        <h1>Pick-up Address</h1>
+                                        <p>Dalstrøget 100 2. 2870 Dyssegård Danmark</p>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-12">
+                                    <div class="address-note">
+                                        <h1>Address Note</h1>
+                                        <p>Door code, floor, landmark</p>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <div class="pickup-date">
+                                        <h1>Pick-up Date</h1>
+                                        <p>2nd June, 20 </p>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <div class="pickup-time">
+                                        <h1>Pick-up Time</h1>
+                                        <p>03 pm - 05 pm</p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="pickup-address">
+                                        <h1>Pick-up Address</h1>
+                                        <p>Dalstrøget 100 2. 2870 Dyssegård Danmark</p>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-12">
+                                    <div class="address-note">
+                                        <h1>Address Note</h1>
+                                        <p>Door code, floor, landmark</p>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <div class="pickup-date">
+                                        <h1>Pick-up Date</h1>
+                                        <p>2nd June, 20 </p>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <div class="pickup-time">
+                                        <h1>Pick-up Time</h1>
+                                        <p>03 pm - 05 pm</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                         <!-- Product Billing Wrapper -->
+                        <div class="product-billing-wrapper">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="product-amount">
+                                        <h1>Amount</h1>
+                                        <p>250 Kr</p>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-12">
+                                    <div class="product-amount">
+                                        <h1>Tax 1</h1>
+                                        <p>12 Kr</p>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-12">
+                                    <div class="product-amount">
+                                        <h1>New User 10</h1>
+                                        <p>- 25 Kr</p>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-12">
+                                    <div class="product-amount">
+                                        <h1>Total Amount</h1>
+                                        <p>237 Kr</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    </div>
+                </div>
+
+                <!-- Column 4 -->
+                <div class="col-md-3 col-lg-3 ">
+                    <h1 class="message-heading">Message</h1>
+                    <div class="pre-order-message-wrapper custom-h over-flow-scroll">
+
+                        <div class="right-site-message-wrapper">
+
+                            <ul class="user-menu-wrapper">
+                                <li class="menu-itme ">
+                                    <a href="" class="menu active">
+                                        Message User
+                                    </a>
+                                </li>
+                                <li class="menu-itme ">
+                                    <a href="ongoing.html" class="menu ">
+                                        Sender - Transporter Messages
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <div class="message-wrapper">
+
+                                <div class="message-notification">
+                                    <h4>Yesterday : 03:50 PM</h4>
+                                    <p>
+                                        <strong>Evan</strong> has made offer of <strong>300 Kr</strong> for your listing.
+                                        Reply here to start a conversation with Evan.
+                                    </p>
+                                </div>
+
+
+                                <div class="msg-box-wrapper receiver-wrapper">
+                                    <!-- <div class="img-wrapper  align-items-center">
+                                        <span class="last-online-time pull-right">9:52 AM</span>
+                                    </div> -->
+    
+                                    <div class="msg-wrapper">
+                                        <p>
+                                            Hello Evan.
+                                            Thanks for the offer
+                                        </p>
+                                    </div>
+                                    <span class="msg-time">8:15 PM</span>
+                                </div>
+
+                                <div class="msg-box-wrapper receiver-wrapper ">
+                                    <!-- <div class="img-wrapper  align-items-center">
+                                        <span class="last-online-time pull-right">9:52 AM</span>
+                                    </div> -->
+        
+                                    <div class="msg-wrapper">
+                                        <p>
+                                            I need this guitar to delivered in
+                                            the coming week. 
+                                            Would you be able to delivery it by 
+                                            Monday ?
+                                        </p>
+                                    </div>
+                                    <span class="msg-time">8:15 PM</span>
+                                </div>
+                                
+                                <div class="msg-box-wrapper sender-wrapper">
+                                    <!-- <div class="img-wrapper d-flex justify-content-between align-items-center">
+                                        <img src="assets/images/user-profile.png" alt=""> 
+                                        <span class="last-online-time pull-right">9:52 AM</span>
+                                    </div> -->
+                                    <div class="msg-wrapper">
+                                        <p> 
+                                            Hi Jannik,
+                                            Yes I’ll be making a pickup run on Friday and drop-off run on Sunday.
+                                        </p>
+                                    </div>
+                                    <span class="msg-time">8:15 PM</span>
+                                </div>
+
+
+                                
+
+                                <div class="msg-box-wrapper sender-wrapper ">
+                                    <!-- <div class="img-wrapper d-flex justify-content-between align-items-center">
+                                        <img src="assets/images/user-profile.png" alt="">
+                                        <span class="last-online-time pull-right">9:52 AM</span>
+                                    </div> -->
+    
+                                    <div class="msg-wrapper">
+                                        <p>
+                                            Thanks,
+                                            That’d be good.
+                                        </p>
+                                    </div>
+                                    <span class="msg-time">8:15 PM</span>
+                                </div>
+
+                                <div class="msg-box-wrapper receiver-wrapper ">
+                                    <!-- <div class="img-wrapper align-items-center">
+                                        <span class="last-online-time pull-right">9:52 AM</span>
+                                    </div> -->
+            
+                                    <div class="msg-wrapper">
+                                        <p>
+                                            I need this guitar to delivered in
+                                            the coming week. 
+                                            Would you be able to delivery it by 
+                                            Monday ?
+                                        </p>
+                                    </div>
+                                    <span class="msg-time">8:15 PM</span>
+                                </div>
+
+                                <div class="message-card">
+                                    <h4>Today : 03:50 PM</h4>
+                                    <div class="card-content">
+                                        <div>
+                                            <h1>Transporter Approved</h1>
+                                            <p>Congrats Evan 😃</p>
+                                        </div>
+                                        <button type="button" class="card-btn">300 KR</button>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="msg-type-box-wrapper align-items-center">
+                                <!-- <div class="user-icon">
+                                <img src="assets/images/user-profile.png" alt="">
+                                </div> -->
+                                <div class="input-type-box">
+                                    <input type="text ">
+                                    <label for="select-file" class="msg-select-file">
+                                        <input type="file" class="image-icon" id="select-file">
+                                        <!-- <i class="fa fa-camera" style="font-size:24px;color: #fff;"></i> -->
+                                        <img src="./assets/images/icons/camera.svg" alt="">
+                                    </label>
+                                </div>
+
+                                <!-- <div class="msg-send-btn-wrapper">
+                                    <button class="msg-send-btn"></button>
+                                </div> -->
+                            </div>
+
+                        </div>
+                          
+                    </div>
+                    
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+    
+    <script src="assets/js/custom.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <!-- Boostrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+    crossorigin="anonymous" />
+
+    <!-- Bootstrap Datepicker CSS -->    
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+    <!-- Bootstrap JS -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    
+    <!-- Side Navbar Start -->
+    <div class="sidenav-wrapper">
+        <div class="logo-wrapper">
+            <a href="./dashboard.html"><img src="assets/images/logo/Logo.svg" alt=""></a>
+        </div>
+
+        <ul class="menu-option-wrapper">
+            <li class="menu-item-wrapper active">
+                <a href="dashboard.html" class="menu-item">
+                    <span class="dashboard-bg"></span>
+                    <span class="dot"></span>
+                </a>
+            </li>
+            <li class="menu-item-wrapper">
+                <a href="all-user.html" class="menu-item">
+                    <span class="user-bg"></span>
+                    <span class="dot"></span>
+                </a>
+            </li>
+            <li class="menu-item-wrapper ">
+                <a href="listings.html" class="menu-item">
+                    <span class="list-bg"></span>
+                    <span class="dot"></span>
+                </a>
+            </li>
+            <li class="menu-item-wrapper ">
+                <a href="support.html" class="menu-item">
+                    <span class="support-bg"></span>
+                    <span class="dot"></span>
+                </a>
+            </li>
+            <li class="menu-item-wrapper ">
+                <a href="settings.html" class="menu-item">
+                    <span class="setting-bg"></span>
+                    <span class="dot"></span>
+                </a>
+            </li>
+        </ul>
+        <ul class="menu-option-wrapper logout-btn-wrapper">
+            <li class="menu-item-wrapper ">
+                <a href="" class="menu-item">
+                    <span class="logout-bg"></span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- Side Navbar End -->
+
+    <!-- Main Content Start -->
+    <div class="main-content-wrapper ">
+
+        <!-- Welcome Back Header Start -->
+        <div class="dashborad-top-menu-wrapper  d-flex justify-content-between">
+            <div class="welcome-msg-wrapper">
+                <h4>Welcome Back! <strong class="user-name">Jannik S.</strong></h4>
+                <!-- <h4 class="user-name">Jannik S.</h4> -->
+            </div>
+            <div class="search-box-wrapper">
+                <ul class="search-box">
+                    <li>
+                        <input type="search" class="search-input input-field" placeholder="Search">
+                    </li>
+
+                    <li>
+                        <a href="#" class="notification-icon">
+                            <i class="fa fa-bell-o " aria-hidden="true"></i>
+                            <span class="dot"></span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="user-profile">
+                            <div class="profile-img">
+                                <img src="assets/images/user-profile.png" alt="" class="rounded-circle">
+                            </div>
+                            <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <!-- Welcome Back Header End -->
+
+        <!-- Card Section Start -->
+        <section class="dashboard-status-card-wrapper">
+            <div class="status-card-wrapper">
+                <div class="row">
+                    
+                    <!-- White Box -->
+                    <div class="col-6 col-md-6 col-lg-2 status-item-wrapper">
+                        <div class="item-wrapper white-box">
+                            <ul class="content-wrapper">
+                                
+                                <li class="user-device">
+                                    <span>iOS App</span>
+                                    <div class="active-user">
+                                        <span class="dot">
+                                            <span class="red-dot"></span>
+                                        </span>
+                                        <span class="no">126</span>
+                                    </div>
+                                </li>
+                                <!-- <li class="active-user">
+                                    <span class="dot"></span>
+                                    <span class="no">126</span>
+                                </li> -->
+                                <!-- <li class="review-wrapper">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                </li> -->
+                                <div class="review-wrapper starrating">
+                                    <input type="radio" id="rate5" name="ios-rating" class="rating-value" data-rating="5" />
+                                    <label for="rate5" title="5 star"></label>
+                        
+                                    <input type="radio" id="rate4" name="ios-rating" class="rating-value" data-rating="4" />
+                                    <label for="rate4" title="4 star"></label>
+                        
+                                    <input type="radio" id="rate3" name="ios-rating" class="rating-value" data-rating="3" />
+                                    <label for="rate3" title="3 star"></label>
+                        
+                                    <input type="radio" id="rate2" name="ios-rating" class="rating-value" data-rating="2" />
+                                    <label for="rate2" title="2 star"></label>
+                        
+                                    <input type="radio" id="rate1" name="ios-rating" class="rating-value" data-rating="1" />
+                                    <label for="rate1" title="1 star"></label>
+                                </div>
+
+                                <li class="total-downloads">
+                                    <span class="t-no"> 
+                                        <i>2,178</i> 
+                                        <p>Total Downloads</p>
+                                    </span>
+                                    <span class="no">+2</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- White Box -->
+                    <div class="col-6 col-md-6 col-lg-2 status-item-wrapper">
+                        <div class="item-wrapper white-box">
+                            <ul class="content-wrapper">
+                                <li class="user-device">
+                                    <span >Android App</span>
+                                    <div class="active-user">
+                                        <span class="dot">
+                                            <span class="red-dot"></span>
+                                        </span>
+                                        <span class="no">126</span>
+                                    </div>
+                                </li>
+                                <!-- <li class="active-user">
+                                    <span class="dot"></span>
+                                    <span class="no">126</span>
+                                </li> -->
+                                <li class="review-wrapper">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                </li>
+                                <!-- <div class="review-wrapper starrating">
+                                    <input type="radio" id="star5" name="android-rating" class="rating-value" data-rating="5" />
+                                    <label for="star5" title="5 star"></label>
+                        
+                                    <input type="radio" id="star4" name="android-rating" class="rating-value" data-rating="4" />
+                                    <label for="star4" title="4 star"></label>
+                        
+                                    <input type="radio" id="star3" name="android-rating" class="rating-value" data-rating="3" />
+                                    <label for="star3" title="3 star"></label>
+                        
+                                    <input type="radio" id="star2" name="android-rating" class="rating-value" data-rating="2" />
+                                    <label for="star2" title="2 star"></label>
+                        
+                                    <input type="radio" id="star1" name="android-rating" class="rating-value" data-rating="1" />
+                                    <label for="star1" title="1 star"></label>
+                                </div> -->
+                    
+                                <li class="total-downloads">
+                                    <span class="t-no"> 
+                                        <i>4,256</i> 
+                                        <p>Total Downloads</p>
+                                    </span>
+                                    <span class="no">+2</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Blue Box -->
+                    <div class="col-6 col-md-6 col-lg-2 status-item-wrapper">
+                        <div class="item-wrapper color-box blue-box">
+                            <div class="content-wrapper d-flex justify-content-between align-items-center">
+                                <div class="img-wrapper">
+                                    <img src="assets/images/icons/total-register.svg" alt="">
+                                </div>
+                                <div class="content">
+                                    <h5 class="text-right">
+                                        Total Registered<br/>
+                                        Users
+                                    </h5>
+                                    <span class="no pull-right">
+                                        5,198
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Yellow Box -->
+                    <div class="col-6 col-md-6 col-lg-2 status-item-wrapper">
+                        <div class="item-wrapper color-box yellow-box">
+                            <div class="content-wrapper d-flex justify-content-between align-items-center">
+                                <div class="content">
+                                    <h5 class="text-left">
+                                        Pending Support<br/>
+                                        Tickets
+                                    </h5>
+                                    <span class="no pull-left">
+                                        337
+                                    </span>
+                                </div>
+                                <div class="img-wrapper">
+                                    <img src="assets/images/icons/pendding-support.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pink Box -->
+                    <div class="col-6 col-md-6 col-lg-2 status-item-wrapper">
+                        <div class="item-wrapper color-box pink-box">
+                            <div class="content-wrapper d-flex justify-content-between align-items-center">
+                                <div class="img-wrapper">
+                                    <img src="assets/images/icons/totla-list.svg" alt="">
+                                </div>
+                                <div class="content">
+                                    <h5 class="text-left">
+                                        Total Active <br/>
+                                        Listings
+                                    </h5>
+                                    <span class="no pull-left">
+                                        8,234
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Green Box -->
+                    <div class="col-6 col-md-6 col-lg-2 status-item-wrapper">
+                        <div class="item-wrapper color-box green-box">
+                            <div class="content-wrapper d-flex justify-content-between align-items-center">
+                                <div class="content text-center w-100">
+                                    <h5 class="">Completed Listings</h5>
+                                    <span class="no ">4,127</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- Card Section End -->
+
+
+        <!-- Main Column Section Start -->
+        <section class="dashboard-main-section-wrapper">
+            <div class="row">
+
+                <!--Column 1-->
+                <div class="col-sm-6 col-md-6 col-lg-4">
+                    <!-- Gross Revenue -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="gross-revenue">
+                                <div class="gross-revenue-header">
+                                    <h1>Gross Revenue</h1>
+                                    <div class="date-filte-wrapper d-flex h-100 align-items-center ">  
+
+                                        <div class="input-group date-picker-btn">
+                                            <input type="text" name="date" value=""/>
+                                        </div>
+                                        
+                                        <span>-</span>
+                                        
+                                        <div class="input-group date-picker-btn">
+                                            <input type="text" name="date" value=""/>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="gross-revenue-graph">
+                                    <!-- <img src="./assets/images/logo/Group3763.png" alt=""> -->
+                                    <canvas id="revenueChart" ></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Heat Map -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="heat-map">
+                                <div class="heat-map-header">
+                                    <h1>Heat Map</h1>
+
+                                    <div class="listing-btn drop-btn">
+                                        <div class="select-btn new-ticket">
+                                            <div class="btn__trigger">Listings Made</div>
+                                            <div class="btn-options">
+                                                <span class="btn-option" data-value="Listing 1">Listing 1</span>
+                                                <span class="btn-option" data-value="Listing 2">Listing 2</span>
+                                                <span class="btn-option" data-value="Listing 3">Listing 3</span>
+                                                <span class="btn-option" data-value="Listing 4">Listing 4</span>
+                                            </div>
+                                            <img src="./assets/images/icons/chevron-down.svg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="heat-map-graph">
+                                    <img src="./assets/images/logo/heat-map.PNG" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <!--Column 2-->
+                <div class="col-sm-6 col-md-6 col-lg-4">
+
+                    <!-- Listing Data -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="listing-data">
+                                
+                                <div class="listing-data-header">
+                                    <h1>Listings Data</h1>
+                                    <div class="listing-nav-tab">
+                                        <!-- Nav tabs -->
+                                        <ul class="nav nav-tabs user-menu-wrapper">
+                                            <li class="nav-item menu-itme">
+                                                <a class="nav-link menu active" data-toggle="tab" href="#act">Active</a>
+                                            </li>
+                                            <li class="nav-item menu-itme">
+                                                <a class="nav-link menu" data-toggle="tab" href="#completed">Completed</a>
+                                            </li>
+                                            <li class="nav-item menu-itme">
+                                                <a class="nav-link menu" data-toggle="tab" href="#expired">Expired</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+        
+                                <div class="listing-data-graph">
+                                    <!-- Tab panes -->
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="act">
+                                            <!-- <img src="./assets/images/logo/listing-chart.PNG" alt=""> -->
+                                            <canvas id="listingChart"></canvas>
+                                        </div>
+                                        <div class="tab-pane fade" id="completed">
+                                            <img src="./assets/images/logo/revenue-chart.PNG" alt="">
+                                        </div>
+                                        <div class="tab-pane fade" id="expired">
+                                            <img src="./assets/images/logo/heat-map.PNG" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Support Tickets -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="support-tickets">
+                                <div class="support-ticket-header">
+                                    <h1>Support Tickets</h1>
+                                </div>
+
+                                <div class="support-ticket-content">
+                                    <ul class="ticket-lists">
+                                        <li class="ticket-list-item">
+                                            <div class="ticket-details">
+                                                <p>#126</p>
+                                                <h2>My order came in damaged</h2>
+                                            </div>                                            
+
+                                            <div class="drop-btn">
+                                                <div class="select-btn resolved">
+                                                    <div class="btn__trigger">Resolved</div>
+                                                    <div class="btn-options">
+                                                        <span class="btn-option" data-value="New Ticket">New Ticket</span>
+                                                        <span class="btn-option" data-value="Pending">Pending</span>
+                                                        <span class="btn-option" data-value="Failed">Failed</span>
+                                                        <span class="btn-option" data-value="Resolved">Resolved</span>
+                                                    </div>
+                                                    <img src="./assets/images/icons/arrow-down_white.svg" alt="">
+                                                </div>
+                                            </div>
+
+                                            <button>View Details</button> 
+                                        </li>
+
+                                        <li class="ticket-list-item">
+                                            <div class="ticket-details">
+                                                <p>#126</p>
+                                                <h2>My order came in damaged</h2>
+                                            </div>
+                                            <div class="drop-btn">
+                                                <div class="select-btn pending">
+                                                    <div class="btn__trigger">Pending</div>
+                                                    <div class="btn-options">
+                                                        <span class="btn-option" data-value="New Ticket">New Ticket</span>
+                                                        <span class="btn-option" data-value="Pending">Pending</span>
+                                                        <span class="btn-option" data-value="Failed">Failed</span>
+                                                        <span class="btn-option" data-value="Resolved">Resolved</span>
+                                                    </div>
+                                                    <img src="./assets/images/icons/arrow-down_white.svg" alt="">
+                                                </div>
+                                            </div>
+                                            <button>View Details</button>
+                                        </li>
+
+                                        <li class="ticket-list-item">
+                                            <div class="ticket-details">
+                                                <p>#126</p>
+                                                <h2>My order came in damaged</h2>
+                                            </div>
+                                            <div class="drop-btn">
+                                                <div class="select-btn failed">
+                                                    <div class="btn__trigger">Failed</div>
+                                                    <div class="btn-options">
+                                                        <span class="btn-option" data-value="New Ticket">New Ticket</span>
+                                                        <span class="btn-option" data-value="Pending">Pending</span>
+                                                        <span class="btn-option" data-value="Failed">Failed</span>
+                                                        <span class="btn-option" data-value="Resolved">Resolved</span>
+                                                    </div>
+                                                    <img src="./assets/images/icons/arrow-down_white.svg" alt="">
+                                                </div>
+                                            </div>
+                                            <button>View Details</button>
+                                        </li>
+
+                                        <li class="ticket-list-item">
+                                            <div class="ticket-details">
+                                                <p>#126</p>
+                                                <h2>My order came in damaged</h2>
+                                            </div>
+                                            <div class="drop-btn">
+                                                <div class="select-btn new-ticket">
+                                                    <div class="btn__trigger">New Ticket</div>
+                                                    <div class="btn-options">
+                                                        <span class="btn-option" data-value="New Ticket">New Ticket</span>
+                                                        <span class="btn-option" data-value="Pending">Pending</span>
+                                                        <span class="btn-option" data-value="Failed">Failed</span>
+                                                        <span class="btn-option" data-value="Resolved">Resolved</span>
+                                                    </div>
+                                                    <img src="./assets/images/icons/arrow-down_white.svg" alt="">
+                                                </div>
+                                            </div>
+                                            <button>View Details</button>
+                                        </li>
+                                    </ul>  
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <!-- Column 3 -->
+                <div class="col-sm-6 col-md-6 col-lg-4">
+                    <div class="notifications">
+                        <div class="notification-header">
+                            <h1>Notifications</h1>
+                            <a href="">Show all Tickets<img src="./assets/images/icons/Icon-feather-arrow-right.svg" alt=""></a>
+                        </div>
+
+                        <div class="notification-content">
+                            <ul class="notification-lists">
+                                
+                                <li class="notification-list-item">
+                                    <div class="notification-details">
+                                        <div class="transporter-image">
+                                            <img src="./assets/images/Rectangle-1.png" alt="">
+                                        </div>
+                                        <div>
+                                            <h1>Jane Doe</h1>
+                                            <p>Transporter Request</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="notification-time">
+                                        <h2>08/10/20</h2>
+                                        <p>02:30 PM</p>
+                                    </div>
+
+                                    <button class="active">View Details</button>
+                                </li>
+
+                                <li class="notification-list-item">
+                                    <div class="notification-details">
+                                        <div class="transporter-image">
+                                            <img src="./assets/images/Rectangle-4987.png" alt="">
+                                        </div>
+                                        <div>
+                                            <h1>Jane Doe</h1>
+                                            <p>Transporter Request</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="notification-time">
+                                        <h2>08/10/20</h2>
+                                        <p>02:30 PM</p>
+                                    </div>
+
+                                    <button>View Details</button>
+                                </li>
+
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- Main Column Section End -->
+
+    </div>
+    <!-- Main Content End -->
+
+  
+
+    <script src="./assets/js/custom.js"></script>
+    <script src="./assets/js/chart.min.js"></script>
+    <script src="./assets/js/custom-chart.js"></script>
+
+    <script src="./assets/js/moment.min.js"></script>
+    <script src="./assets/js/daterangepicker.min.js"></script>
+
+    <script>
+        $(function() {
+        $('input[name="date"]').daterangepicker({
+                singleDatePicker: true,
+                showDropdowns: false,
+                minYear: 1901,
+                locale: {
+                    format: 'DD/MM/YY',
+                }
+            });
+        });
+
+//         $(function() {
+//   $('input[name="date"]').daterangepicker({
+//   }, function(start, end, label) {
+//     console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+//   });
+// });
+
+// $(function() {
+
+// $('input[name="date"]').daterangepicker({
+//     autoUpdateInput: false,
+//     locale: {
+//         cancelLabel: 'Clear'
+//     }
+// });
+
+// $('input[name="datefilter"]').on('apply.daterangepicker', function(ev, picker) {
+//     $(this).val(picker.startDate.format('MM/DD/YYYY') + ' - ' + picker.endDate.format('MM/DD/YYYY'));
+// });
+
+// $('input[name="datefilter"]').on('cancel.daterangepicker', function(ev, picker) {
+//     $(this).val('');
+// });
+
+// });
+    </script>
+
+
+</body>
+
+</html>

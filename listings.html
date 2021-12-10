@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List</title>
+    
+    <!-- Boostrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+    crossorigin="anonymous" />
+
+    <!-- Bootstrap Datepicker CSS-->    
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+    <!-- Bootstrap JS -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+</head>
+
+<body>
+
+    <!-- Side Navbar Start-->
+    <div class="sidenav-wrapper">
+        <div class="logo-wrapper">
+            <a href="./dashboard.html"><img src="assets/images/logo/Logo.svg" alt=""></a>
+        </div>
+
+        <ul class="menu-option-wrapper">
+            <li class="menu-item-wrapper">
+                <a href="dashboard.html" class="menu-item">
+                    <span class="dashboard-bg"></span>
+                    <span class="dot"></span>
+                </a>
+            </li>
+            <li class="menu-item-wrapper">
+                <a href="all-user.html" class="menu-item">
+                    <span class="user-bg"></span>
+                    <span class="dot"></span>
+                </a>
+            </li>
+            <li class="menu-item-wrapper active">
+                <a href="listings.html" class="menu-item">
+                    <span class="list-bg"></span>
+                    <span class="dot"></span>
+                </a>
+            </li>
+            <li class="menu-item-wrapper ">
+                <a href="support.html" class="menu-item">
+                    <span class="support-bg"></span>
+                    <span class="dot"></span>
+                </a>
+            </li>
+            <li class="menu-item-wrapper ">
+                <a href="settings.html" class="menu-item">
+                    <span class="setting-bg"></span>
+                    <span class="dot"></span>
+                </a>
+            </li>
+        </ul>
+            <ul class="menu-option-wrapper logout-btn-wrapper">
+            <li class="menu-item-wrapper ">
+                <a href="#" class="menu-item">
+                    <span class="logout-bg"></span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- Side Navbar End -->
+
+    <div class="main-content-wrapper" id="listing-page-wrap">
+        <div class="dashborad-top-menu-wrapper  d-flex justify-content-between">
+            <div class="welcome-msg-wrapper">
+                <h4 class="user-name">LISTINGS</h4>
+            </div>
+            <div class="search-box-wrapper">
+                <ul class="search-box">
+                    <!-- <li>
+                        <a href="#" class="notification-icon">
+                            <i class="fa fa-bell-o " aria-hidden="true"></i>
+                            <span class="dot"></span>
+                        </a>
+                    </li> -->
+                    <li>
+                        <a href="#" class="user-profile">
+                            <div class="profile-img">
+                                <img src="assets/images/user-profile.png" alt="" class="rounded-circle">
+                            </div>
+                            <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="breadcrumb-wrapper">
+            <ol class="breadcrumb p-0 m-0">
+                <li class="breadcrumb-item"><a href="dashboard.html">Dashboard</a></li>
+                <li class="breadcrumb-item active">My Listings</li>
+            </ol>
+        </div>
+
+        <section class="dashboard-status-card-wrapper ">
+            <div class="row">
+                <div class="col-md-5 pr-0">
+                    <ul class="user-menu-wrapper">
+                        <li class="menu-itme">
+                            <a href="" class="menu active">
+                                Show All
+                            </a>
+                        </li>
+                        <li class="menu-itme ">
+                            <a href="ongoing.html" class="menu">
+                                Ongoing
+                            </a>
+                        </li>
+                        <li class="menu-itme">
+                            <a href="completed.html" class="menu">
+                                Completed
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4 p-0">
+                    <div class="search-box-wrapper mb-0">
+                        <ul class="search-box">
+                            <li>
+                                <input type="search" class="search-input input-field" placeholder="Search">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 pr-0">
+                    <div class="date-filte-wrapper d-flex h-100 align-items-center ">
+
+                        <div class="input-group">
+                            <input type="text" name="date" value="" class="form-control"/>
+                        </div>
+
+                        <span>To</span>
+
+                        <div class="input-group">
+                            <input type="text" name="date" value="" class="form-control"/>
+                        </div>
+
+                    </div>
+                </div>
+            </div>  
+            
+        
+
+            <div class="product-list-card-wrapper ">
+                <div class="row product-row">
+                    <div class="product-column"> <!-- col-sm-6 col-md-6 col-lg-4 col-xl-2 -->
+                        <div class="product-list-item-wrapper">
+                            <a href="#" class="product-link-wrapper"  data-toggle="modal" data-target="#pruduct-card-modal">
+                                <div class="product-name-img-wrapper">
+                                        <div class="product-img-wrapper">
+                                            <img src="assets/images/product-img/Rectangle-4964.png" alt="">
+                                        </div>
+                                        <div class="product-name">
+                                            <p>
+                                                Acoustic Gitar 231
+                                            </p>
+                                        </div>
+                                </div>
+                                <div class="user-profile-wrapper selected-product">
+                                    <div class="user-profile">
+                                        <img src="assets/images/icons/profile-icon.svg" alt="">
+                                    </div>
+                                    <div class="user-name">
+                                        <h4>
+                                            No Transporter
+                                            Selected
+                                        </h4>
+                                        
+                                    </div>
+                                </div>
+                                    
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="product-column">
+                        <div class="product-list-item-wrapper">
+                            <a href="#" class="product-link-wrapper"  data-toggle="modal" data-target="#pruduct-card-modal">
+                                <div class="product-name-img-wrapper">
+                                    <div class="product-img-wrapper">
+                                        <img src="assets/images/product-img/Rectangle-4964.png" alt="">
+                                    </div>
+                                    <div class="product-name">
+                                        <p>
+                                            Acoustic Gitar 231
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="user-profile-wrapper failed-product">
+                                    <div class="user-profile">
+                                        <img src="assets/images/user-profile.png" alt="">
+                                    </div>
+                                    <div class="user-name">
+                                        <h4>
+                                        Wilhelm Dibbert
+                                        </h4>
+                                        <span>
+                                        Listing failed
+                                        </span>
+                                    </div>
+                                </div>
+                                
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="product-column">
+                        <div class="product-list-item-wrapper">
+                            <a href="#" class="product-link-wrapper"  data-toggle="modal" data-target="#pruduct-card-modal">
+                                <div class="product-name-img-wrapper">
+                                    <div class="product-img-wrapper">
+                                        <img src="assets/images/product-img/Rectangle-4964.png" alt="">
+                                    </div>
+                                    <div class="product-name">
+                                        <p>
+                                            Acoustic Gitar 231
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="user-profile-wrapper not-picked-product">
+                                    <div class="user-profile">
+                                        <img src="assets/images/user-profile.png" alt="">
+                                    </div>
+                                    <div class="user-name">
+                                        <h4>
+                                        Wilhelm Dibbert
+                                        </h4>
+                                        <span>
+                                        Listing failed
+                                        </span>
+                                    </div>
+                                </div>
+                                
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="product-column">
+                        <div class="product-list-item-wrapper">
+                            <a href="#" class="product-link-wrapper"  data-toggle="modal" data-target="#pruduct-card-modal">
+                                <div class="product-name-img-wrapper">
+                                    <div class="product-img-wrapper">
+                                        <img src="assets/images/product-img/Rectangle-4964.png" alt="">
+                                    </div>
+                                    <div class="product-name">
+                                        <p>
+                                            Acoustic Gitar 231
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="user-profile-wrapper delivered-product">
+                                    <div class="user-profile">
+                                        <img src="assets/images/user-profile.png" alt="">
+                                    </div>
+                                    <div class="user-name">
+                                        <h4>
+                                        Wilhelm Dibbert
+                                        </h4>
+                                        <span>
+                                        Listing failed
+                                        </span>
+                                    </div>
+                                </div>
+                                
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- <div class="product-column">
+                        <div class="product-list-item-wrapper">
+                            <a href="#" class="product-link-wrapper"  data-toggle="modal" data-target="#pruduct-card-modal">
+                                <div class="product-name-img-wrapper">
+                                    <div class="product-img-wrapper">
+                                        <img src="assets/images/product-img/Rectangle-4964.png" alt="">
+                                    </div>
+                                    <div class="product-name">
+                                        <p>
+                                            Acoustic Gitar 231
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="user-profile-wrapper selected-product">
+                                    <div class="user-profile">
+                                        <img src="assets/images/user-profile.png" alt="">
+                                    </div>
+                                    <div class="user-name">
+                                        <h4>
+                                        No Transporter
+                                        Selected
+                                        </h4>
+                                        
+                                    </div>
+                                </div>
+                                
+                            </a>
+                        </div>
+                    </div> -->
+
+                    <!-- <div class="product-column">
+                        <div class="product-list-item-wrapper">
+                            <a href="#" class="product-link-wrapper"  data-toggle="modal" data-target="#pruduct-card-modal">
+                                <div class="product-name-img-wrapper">
+                                    <div class="product-img-wrapper">
+                                        <img src="assets/images/product-img/Rectangle-4964.png" alt="">
+                                    </div>
+                                    <div class="product-name">
+                                        <p>
+                                            Acoustic Gitar 231
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="user-profile-wrapper failed-product">
+                                    <div class="user-profile">
+                                        <img src="assets/images/user-profile.png" alt="">
+                                    </div>
+                                    <div class="user-name">
+                                        <h4>
+                                        Wilhelm Dibbert
+                                        </h4>
+                                        <span>
+                                        Listing failed
+                                        </span>
+                                    </div>
+                                </div>
+                                
+                            </a>
+                        </div>
+                    </div> -->
+
+                    <!-- <div class="product-column">
+                        <div class="product-list-item-wrapper">
+                            <a href="#" class="product-link-wrapper"  data-toggle="modal" data-target="#pruduct-card-modal">
+                                <div class="product-name-img-wrapper">
+                                    <div class="product-img-wrapper">
+                                        <img src="assets/images/product-img/Rectangle-4964.png" alt="">
+                                    </div>
+                                    <div class="product-name">
+                                        <p>
+                                            Acoustic Gitar 231
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="user-profile-wrapper not-picked-product">
+                                    <div class="user-profile">
+                                        <img src="assets/images/user-profile.png" alt="">
+                                    </div>
+                                    <div class="user-name">
+                                        <h4>
+                                        Wilhelm Dibbert
+                                        </h4>
+                                        <span>
+                                        Listing failed
+                                        </span>
+                                    </div>
+                                </div>
+                                
+                            </a>
+                        </div>
+                    </div> -->
+
+                    <!-- <div class="product-column">
+                        <div class="product-list-item-wrapper">
+                            <a href="#" class="product-link-wrapper"  data-toggle="modal" data-target="#pruduct-card-modal">
+                                <div class="product-name-img-wrapper">
+                                    <div class="product-img-wrapper">
+                                        <img src="assets/images/product-img/Rectangle-4964.png" alt="">
+                                    </div>
+                                    <div class="product-name">
+                                        <p>
+                                            Acoustic Gitar 231
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="user-profile-wrapper delivered-product">
+                                    <div class="user-profile">
+                                        <img src="assets/images/user-profile.png" alt="">
+                                    </div>
+                                    <div class="user-name">
+                                        <h4>
+                                        Wilhelm Dibbert
+                                        </h4>
+                                        <span>
+                                        Listing failed
+                                        </span>
+                                    </div>
+                                </div>
+                                
+                            </a>
+                        </div>
+                    </div> -->
+
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+  </div>
+
+
+  
+    <!-- Modal -->
+    <div class="modal right fade product-modal-wrapper modal-pedding" id="pruduct-card-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+    <div class="modal-dialog" role="document">
+
+        <div class="modal-content">
+
+            <div class="modal-header d-flex justify-content-between">
+                <div class="close-btn-werapper">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <!-- <i class="fa fa-arrow-left" aria-hidden="true"></i> -->
+                    <img src="./assets/images/icons/left-arrow.svg" alt="">
+                    </button>
+                </div>
+                <div class="suspend-btn-wrapper">
+                    <button>
+                    Suspend
+                    </button>
+                    <button>
+                    Edit Mode
+                    </button>
+                </div>
+            </div>
+
+            <div class="modal-body">
+                    <!-- Product Image Detail Wrapper-->
+                    <div class="product-img-detail-wraper">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="img-slide-wrapper">
+                                    <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
+                                        <ol class="carousel-indicators">
+                                            <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
+                                            <li data-target="#carouselIndicators" data-slide-to="1"></li>
+                                        
+                                        </ol>
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img class="d-block w-100 border-r-10" src="assets/images/product-img/Rectangle-5108.png" alt="First slide">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img class="d-block w-100 border-r-10" src="assets/images/product-img/Rectangle-5108.png" alt="Second slide">
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="product-title">
+                                            <p>Product Name & Details</p>
+                                            <h1>Speaker with Plants</h1>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <div class="product-specs">
+                                                    <div class="product-height">
+                                                        <p class="prod-spec-title">Height</p>
+                                                        <h1 class="prod-spec-detail">27 cm</h1>
+                                                    </div>
+                                                    <div class="product-width">
+                                                        <p class="prod-spec-title">Width</p>
+                                                        <h1 class="prod-spec-detail">27 cm</h1>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <div class="product-specs">
+                                                    <div class="product-depth">
+                                                        <p class="prod-spec-title">Depth</p>
+                                                        <h1 class="prod-spec-detail">27 cm</h1>
+                                                    </div>
+                                                    <div class="product-weight">
+                                                        <p class="prod-spec-title">Weight</p>
+                                                        <h1 class="prod-spec-detail">27 Kgs</h1>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <div class="product-need">
+                                    <p>2 People Needed</p>
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Product Pickup Address Wrapper -->
+                    <div class="product-pickup-address-wrapper">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="pickup-address">
+                                    <h1>Pick-up Address</h1>
+                                    <p>Dalstrøget 100 2. 2870 Dyssegård Danmark</p>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12">
+                                <div class="address-note">
+                                    <h1>Address Note</h1>
+                                    <p>Door code, floor, landmark</p>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="pickup-date">
+                                    <h1>Pick-up Date</h1>
+                                    <p>2nd June, 20 </p>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="pickup-time">
+                                    <h1>Pick-up Time</h1>
+                                    <p>03 pm - 05 pm</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="pickup-address">
+                                    <h1>Pick-up Address</h1>
+                                    <p>Dalstrøget 100 2. 2870 Dyssegård Danmark</p>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12">
+                                <div class="address-note">
+                                    <h1>Address Note</h1>
+                                    <p>Door code, floor, landmark</p>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="pickup-date">
+                                    <h1>Pick-up Date</h1>
+                                    <p>2nd June, 20 </p>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="pickup-time">
+                                    <h1>Pick-up Time</h1>
+                                    <p>03 pm - 05 pm</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Product Billing Wrapper -->
+                    <div class="product-billing-wrapper">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="product-amount">
+                                    <h1>Amount</h1>
+                                    <p>250 Kr</p>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12">
+                                <div class="product-amount">
+                                    <h1>Tax 1</h1>
+                                    <p>12 Kr</p>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12">
+                                <div class="product-amount">
+                                    <h1>New User 10</h1>
+                                    <p>- 25 Kr</p>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12">
+                                <div class="product-amount">
+                                    <h1>Total Amount</h1>
+                                    <p>237 Kr</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Sender & Transporter Wrapper -->
+                    <div class="product-sender-transporter">
+                        <div class="row">
+                            <div class="col-sm-6" style="border-right: 1px solid rgba(0, 0, 0, 0.1);">
+                                <div class="sender-wrapper">
+                                    <h1>Sender</h1>
+                                    <div class="sender">
+                                        <img src="./assets/images/Rectangle5040.png" alt="">
+                                        <div class="sender-details">
+                                            <h2>Manson Yundt</h2>
+                                            <p><span></span>Offline</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="transporter-wrapper">
+                                    <h1>Transporter</h1>
+                                    <div class="transporter">
+                                        <img src="./assets/images/Rectangle5083.png" alt="">
+                                        <div class="transporter-details">
+                                            <h2>Janet Heaney</h2>
+                                            <p><span></span>Offline</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+        </div><!-- modal-content -->
+    </div><!-- modal-dialog -->
+    </div><!-- modal -->
+
+    <script src="./assets/js/moment.min.js"></script>
+    <script src="./assets/js/daterangepicker.min.js"></script>
+    
+
+    <script>
+        $(function() {
+        $('input[name="date"]').daterangepicker({
+                singleDatePicker: true,
+                showDropdowns: true,
+                minYear: 1901,
+                opens: 'left',
+                locale: {
+                    format: 'DD/MM/YY',
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>

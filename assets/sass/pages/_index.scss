@@ -1,0 +1,78 @@
+
+
+#main-header{
+    .brand-logo-wrapper{
+        a{
+            display: none;
+        }
+    }
+}
+.admin-login-form-wrapper{
+    .form-wrapper{
+        margin: auto;
+        margin-top: 70px;
+        
+        .login-form{
+            // box-shadow: 0 4px 14px 0 rgba(56, 14, 121, 0.1);
+            padding: 16px;
+            .logo-wrapper{
+                height: 200px;
+                position: relative;
+                img{
+                    width: 150px;
+                    height: 150px;
+                    position: absolute;
+                    left:85px;
+                    bottom:0;
+                    animation: bird;
+                    animation-duration: 2s;
+                    animation-fill-mode: forwards;
+                }
+            }
+            .form-group{
+                margin-bottom: 2rem !important;
+                label{
+                    font-family: Barlow;
+                    font-size: 16px;
+                    font-weight: 500;
+                    margin-bottom: 12px;
+                }
+                input{
+                    font-family: Barlow;
+                    font-size: 16px;
+                    font-weight: 600;
+                    border-radius: 5px;
+                    border: solid 2px rgba(0, 0, 0, 0.1);
+                    background-color: #ffffff;
+                }
+                input::placeholder{
+                    font-family: Barlow;
+                    font-size: 14px;
+                    font-weight: 600;
+                    color: rgba(0, 0, 0, 0.2);
+                }
+            }
+            a{
+                height: 50px;
+                margin-top: 45px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            a:hover{
+                color:#fff;
+            }
+        }
+    } 
+}
+
+
+@keyframes bird{
+    0%{
+        bottom:0;
+    }
+
+    100%{
+        bottom:35%;
+    }
+}

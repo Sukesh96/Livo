@@ -1,0 +1,141 @@
+.sidenav-wrapper {
+    height: 100%;
+    width: 80px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #fafafc;
+    overflow-x: hidden;
+    padding: 39px 16px;
+
+    .logo-wrapper{
+        margin-bottom: 30px;
+        img{
+            width: 48px;
+            height: 30px;
+        }
+    }
+    .logout-btn-wrapper{
+        position: absolute;
+        bottom: 15px;
+    }
+    .menu-option-wrapper{
+        .menu-item-wrapper{
+            a{
+                span{
+                    &:first-child{
+                        width: 20px;
+                        height: 20px;
+                        display: block;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: 20px;
+                    }
+                }
+                width: 48px;
+                text-align: center;
+                height: 80px;
+                display: grid;
+                justify-content: center;
+                align-items: center;
+                .dashboard-bg{
+                    background-image: url(../images/icons/home.svg);
+                }
+                .user-bg{
+                    background-image: url(../images/icons/users.svg);
+                }
+                .list-bg{
+                    background-image: url(../images/icons/list.svg);
+                }
+                .support-bg{
+                    background-image: url(../images/icons/life-buoy.svg);
+                }
+                .setting-bg{
+                    background-image: url(../images/icons/settings.svg);
+                }
+                .logout-bg{
+                    background-image: url(../images/icons/log-out.svg);
+                }
+              
+            }
+        }
+    }
+
+    // .menu-item-wrapper{
+    //     .menu-item{
+    //         &:hover{
+    //             .dot{
+    //                 width: 4px;
+    //                 height: 4px;
+    //                 background-color: #f21c47;
+    //                 border-radius: 50%;
+    //                 display: block;
+    //                 margin-left: auto;
+    //                 margin-right: auto;
+    //                 margin-top: -42px;
+                    
+                    
+    //             }
+    //             .dashboard-bg{
+    //                 background-image: url(../images/icons/active-home.svg);
+    //             }
+    //             .user-bg{
+    //                 background-image: url(../images/icons/active-user-icon.svg);
+    //             }
+    //             .list-bg{
+    //                 background-image: url(../images/icons/active-list.svg);
+    //             }
+    //             .support-bg{
+    //                 background-image: url(../images/icons/active-life-buoyo.svg);
+    //             }
+    //             .setting-bg{
+    //                 background-image: url(../images/icons/active-settings.svg);
+    //             }                
+    //         }            
+    //     }
+    // }
+
+
+    .menu-item-wrapper.active{
+        .menu-item{
+            .dot{
+                width: 4px;
+                height: 4px;
+                background-color: #f21c47;
+                border-radius: 50%;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: -42px;
+                 
+                 
+            }
+            .dashboard-bg{
+                background-image: url(../images/icons/active-home.svg);
+            }
+            .user-bg{
+                background-image: url(../images/icons/active-user-icon.svg);
+            }
+            .list-bg{
+                background-image: url(../images/icons/active-list.svg);
+            }
+            .support-bg{
+                background-image: url(../images/icons/active-life-buoyo.svg);
+            }
+            .setting-bg{
+                background-image: url(../images/icons/active-settings.svg);
+            }             
+        }
+    }
+
+    
+}
+  
+  
+.main-content-wrapper {
+    margin-left: 80px; /* Same as the width of the sidenav */
+    padding-top: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+}

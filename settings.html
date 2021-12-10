@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coupon</title>
+    <!-- boostrap css -->
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <!-- custom style -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+    crossorigin="anonymous" />
+    <!-- bootstrap js -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+</head>
+
+<body>
+
+    <div class="sidenav-wrapper">
+        <div class="logo-wrapper">
+            <a href="./dashboard.html"><img src="assets/images/logo/Logo.svg" alt=""></a>
+        </div>
+
+        <ul class="menu-option-wrapper">
+            <li class="menu-item-wrapper">
+                <a href="dashboard.html" class="menu-item">
+                    <span class="dashboard-bg"></span>
+                    <span class="dot"></span>
+                </a>
+            </li>
+            <li class="menu-item-wrapper">
+                <a href="all-user.html" class="menu-item">
+                    <span class="user-bg"></span>
+                    <span class="dot"></span>
+                </a>
+            </li>
+            <li class="menu-item-wrapper ">
+                <a href="listings.html" class="menu-item">
+                    <span class="list-bg"></span>
+                    <span class="dot"></span>
+                </a>
+            </li>
+            <li class="menu-item-wrapper ">
+                <a href="support.html" class="menu-item">
+                    <span class="support-bg"></span>
+                    <span class="dot"></span>
+                </a>
+            </li>
+            <li class="menu-item-wrapper active">
+                <a href="settings.html" class="menu-item">
+                    <span class="setting-bg"></span>
+                    <span class="dot"></span>
+                </a>
+            </li>
+        </ul>
+        <ul class="menu-option-wrapper logout-btn-wrapper">
+            <li class="menu-item-wrapper ">
+                <a href="#" class="menu-item">
+                    <span class="logout-bg"></span>
+                
+                </a>
+            </li>
+        </ul>
+    </div>
+
+
+    <div class="main-content-wrapper ">
+        <!-- Dashboard Top Menu Section -->
+        <div class="dashborad-top-menu-wrapper  d-flex justify-content-between">
+            <div class="welcome-msg-wrapper">
+                <h4 class="user-name">Settings</h4>
+            </div>
+            <div class="search-box-wrapper">
+                <ul class="search-box">
+                    <li>
+                        <input type="search" class="search-input input-field" placeholder="Search">
+                    </li>
+                    <li>
+                        <a href="#" class="notification-icon">
+                            <i class="fa fa-bell-o " aria-hidden="true"></i>
+                            <span class="dot"></span>
+                        </a>
+                    </li>
+                    <li>
+                    <a href="#" class="user-profile">
+                        <div class="profile-img">
+                            <img src="assets/images/user-profile.png" alt="" class="rounded-circle">
+                        </div>
+                        <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                    </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Dashboard Main Section -->
+        <section class="dashboard-status-card-wrapper">
+
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="dashboard-left-col">
+                        <ul class="nav flex-column">
+                            <li class="nav-item nav-active">
+                              <a class="nav-link" href="./settings-coupon.html">Coupons</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="./settings-faq.html">FAQ</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="./settings-legal.html">Legal</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="./settings-ad-banner.html">Ad Banners</a>
+                            </li>
+                          </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-10">
+                    <div class="dashboard-right-col">
+
+                        <ul class="user-menu-wrapper">
+                            <div>
+                                <li class="menu-itme">
+                                    <a href="" class="menu active">
+                                    Show All
+                                    </a>
+                                </li>
+                                <li class="menu-itme ">
+                                    <a href="" class="menu ">
+                                    Active
+                                    </a>
+                                </li>
+                                <li class="menu-itme">
+                                    <a href="" class="menu">
+                                    Disabled
+                                    </a>
+                                </li>
+                            </div>
+                            <div id="add-btn">
+                                <button type="button" data-toggle="modal" data-target="#addCoupon">Add New Coupon</button>
+                            </div>
+                        </ul>
+
+                        <div class="status-card-wrapper" id="coupon-page-table">
+                            <div class="table-responsive-sm">          
+                                <table class="table" id="settings-table">
+                                    <thead class="thead-light">
+                                        <tr class="t-row">
+                                            <th class="tbl-head">Coupon Code</th>
+                                            <th class="tbl-head">Discount</th>
+                                            <th class="tbl-head">Description</th>
+                                            <th class="tbl-head">Auto Activate</th>
+                                            <th class="tbl-head">Auto Disable</th>
+                                            <th class="tbl-head">Status</th>
+                                            <th class="tbl-head">Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="tbl-data tbl-data-light">#NewUser10</td>
+                                            <td class="tbl-data">10% OFF</td>
+                                            <td class="tbl-data">Use this code to get 10% Off on your first listing</td>
+                                            <td class="tbl-data">- -</td>
+                                            <td class="tbl-data">- -</td>
+                                            <td class="tbl-data">
+                                                <label class="switch">
+                                                    <input type="checkbox">
+                                                    <span class="slider round"></span>
+                                                </label>
+                                            </td>
+                                            <td class="actions">
+                                                <a href="#"><img src="./assets/images/icons/Icon-feather-edit-3.svg" alt=""></a>
+                                                <a href="#"><img src="./assets/images/icons/Icon-feather-trash-2.svg" alt=""></a>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="tbl-data tbl-data-light">#Christmas15</td>
+                                            <td class="tbl-data">10% OFF</td>
+                                            <td class="tbl-data">Use this code to get 10% Off on your first listing</td>
+                                            <td class="tbl-data">1st Dec, 20</td>
+                                            <td class="tbl-data">1st Jan, 21</td>
+                                            <td class="tbl-data">
+                                                <label class="switch">
+                                                    <input type="checkbox">
+                                                    <span class="slider round"></span>
+                                                </label>
+                                            </td>
+                                            <td class="actions">
+                                                <a href="#"><img src="./assets/images/icons/Icon-feather-edit-3.svg" alt=""></a>
+                                                <a href="#"><img src="./assets/images/icons/Icon-feather-trash-2.svg" alt=""></a>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="tbl-data tbl-data-light">#Cashback30</td>
+                                            <td class="tbl-data">- -</td>
+                                            <td class="tbl-data">Use this code to get 10% Off on your first listing</td>
+                                            <td class="tbl-data">31st Dec, 20</td>
+                                            <td class="tbl-data">1st Feb, 21</td>
+                                            <td class="tbl-data">
+                                                <label class="switch">
+                                                    <input type="checkbox">
+                                                    <span class="slider round"></span>
+                                                </label>
+                                            </td>
+                                            <td class="actions">
+                                                <a href="#"><img src="./assets/images/icons/Icon-feather-edit-3.svg" alt=""></a>
+                                                <a href="#"><img src="./assets/images/icons/Icon-feather-trash-2.svg" alt=""></a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Modal -->
+<div class="modal right fade user-modal-wrapper modal-pedding" id="addCoupon" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+  
+        <div class="modal-header d-flex justify-content-between">
+            <div class="close-btn-werapper">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <!-- <i class="fa fa-arrow-left" aria-hidden="true"></i> -->
+                    <img src="./assets/images/icons/left-arrow.svg" alt="">
+                </button>
+            </div>
+        </div>
+  
+        <div class="modal-body">
+            <ul class="modal-lists">
+                <li class="modal-list-item">
+                    <div class="list-head">
+                        <h1>Enter Coupon Code</h1>
+                        <h2>No spaces</h2>
+                    </div>
+                    <div class="del-coupon">
+                        <p>NewUser10</p>
+                        <p>x  Code already in use</p>
+                    </div>
+                </li>
+
+                <li class="modal-list-item item-m">
+                    <div class="list-head">
+                        <h1>Auto Active Date</h1>
+                        <h2>Date/Month/Year</h2>
+                    </div>
+                    <p>22/11/2020</p>
+                </li>
+
+                <li class="modal-list-item item-m">
+                    <div class="list-head">
+                        <h1>Auto Disable Date</h1>
+                        <h2>Date/Month/Year</h2>
+                    </div>
+                    <p>31/12/2020</p>
+                </li>
+
+                <li class="modal-list-item item-m">
+                    <div class="list-head">
+                        <h1>Max use count</h1>
+                        <h2>Enter numeric value only</h2>
+                    </div>
+                    <p>500</p>
+                </li>
+
+                <li class="modal-list-item item-m">
+                    <div class="list-head">
+                        <h1>Enter Discount</h1>
+                        <h2>Percentage value only</h2>
+                    </div>
+                    <p>10%</p>
+                </li>
+
+                <li class="modal-list-item item-m">
+                    <div class="list-head">
+                        <h1>Enter Cashback</h1>
+                        <h2>Amount in Kr</h2>
+                    </div>
+                    <p>50 Kr</p>
+                </li>
+
+                <li class="modal-list-item model-desc item-m">
+                    <div class="list-head">
+                        <h1>Enter Description</h1>
+                        <h2>158/200</h2>
+                    </div>
+                    <textarea id="list-desc" placeholder="Lorem ipsum dolor sit amet consectetur adipisicing elit."></textarea>
+                </li>
+            </ul>
+  
+            <div class="add-coupon-btn">
+                <button type="button">Add Coupon Code</button>
+            </div>
+        </div>
+  
+      </div><!-- modal-content -->
+    </div><!-- modal-dialog -->
+  </div><!-- modal -->
+
+</body>
+</html>

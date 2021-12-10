@@ -1,0 +1,16 @@
+#legal-container{
+    margin-top: 20px;
+    .container-fluid{
+        padding: 30px 30px 29px;
+        border-radius: 12px;
+        background-color: #fafafc;
+        p{
+            font-family: Barlow;
+            font-size: 16px;
+            font-weight: normal;
+            line-height: 1.25;
+            color: #000000;
+            margin-bottom: 16px;
+        }
+    }
+}

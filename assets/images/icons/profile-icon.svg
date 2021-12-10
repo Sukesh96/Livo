@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="28" height="28" viewBox="0 0 28 28">
+  <defs>
+    <clipPath id="clip-path">
+      <circle id="Ellipse_724" data-name="Ellipse 724" cx="14" cy="14" r="14" fill="#fff" stroke="#f21c47" stroke-width="1.5"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_33" data-name="Mask Group 33" clip-path="url(#clip-path)">
+    <path id="Icon_metro-user" data-name="Icon metro-user" d="M16.174,18.823V17.517a7.077,7.077,0,0,0,3.169-5.888c0-3.938,0-7.13-4.753-7.13s-4.753,3.192-4.753,7.13a7.077,7.077,0,0,0,3.169,5.888v1.307C7.631,19.263,3.5,21.9,3.5,25.1H25.681C25.681,21.9,21.549,19.263,16.174,18.823Z" transform="translate(-0.47 2.668)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+  </g>
+</svg>

@@ -1,0 +1,243 @@
+.ad-banners{
+    border-radius: 12px;
+    box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.08);
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+
+
+    .banner-img{
+        width: 100%;
+        height: 150px;
+        border-radius: 8px;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+    }
+    
+    .banner-content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 16px;
+        .banner-status{
+            width: 50%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+            h1{
+                font-size: 20px;
+                font-weight: bold;
+                color: rgba(0, 0, 0, 0.3);
+                margin-right: 17px;
+                p{
+                    font-size: 16px;
+                    font-weight: bold;
+                    color: #000000;
+                }
+            }
+
+            .switch{
+                margin-bottom: 0;
+            }
+        }
+
+        .banner-actions{
+            width: 40%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            a:first-child{
+                margin-right: 16px;
+            }
+            a{
+                width: 44px;
+                height: 44px;                
+                background-color: rgba(0, 0, 0, 0.04);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                img{
+                    width:22px;
+                    height: 22px;
+                    object-fit: contain;
+                }
+            }
+        }
+    }
+}
+
+// Add Banner Modal Style
+#addBanner{
+    .modal-body{
+        .add-banner-content{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 16px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            h1{
+                font-size: 16px;
+                font-weight: bold;
+                color: #000000;
+                margin-bottom: 20px;
+            }
+            .upload-banner-img{
+                margin-bottom: 20px;
+                width: 100%;
+                height: 184px;
+            }
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 8px;
+            }
+            .img-upload{
+                padding-top: 12px;
+                padding-bottom: 12px;
+                border-radius: 5px;
+                border: 0px;
+                background-color: rgba(0, 0, 0, 0.2);
+                font-size: 16px;
+                font-weight: bold;
+                color: #ffffff;
+                margin-bottom: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                input{
+                    display: none;
+                }
+            }
+            
+        }
+        .status{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+            h1{
+                font-size: 20px;
+                font-weight: 500;
+                color: #000000;
+            }
+        }
+
+        .add-banner-publish-date{
+            display: flex;
+            flex-direction: column;
+            .banner-date-time{
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    }
+
+    .banner-publish-btn{
+        margin-top: 32px;
+        margin-bottom: 16px;
+        button{
+            width: 100%;
+            height: 48px;
+            border-radius: 5px;
+            border: 0;
+            background-color: #f21c47;
+            font-size: 16px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+    }
+}
+
+
+
+// Screen Size Smaller Than & Equal To 1400px //
+@media screen and (max-width: 1400px ){
+    #banner-page{
+        .ad-banners{
+            .banner-content{
+                .banner-status{
+                    h1{
+                        font-size: 16px;
+                        p{
+                            font-size: 14px;
+                        }
+                    }
+                }
+
+                .banner-actions{
+                    a{
+                        width: 34px;
+                        height: 34px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+// Screen Size Smaller Than & Equal To 1250px //
+@media screen and (max-width: 1250px ){
+    #banner-page{
+        .ad-banners{
+            .banner-content{
+                .banner-status{
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    h1{
+                        font-size: 14px;
+                        p{
+                            font-size: 12px;
+                        }
+                    }
+                }
+
+                .banner-actions{
+                    a{
+                        width: 24px;
+                        height: 24px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// Screen Size Smaller Than & Equal To 991px //
+@media screen and (max-width: 991px ){
+    #banner-page{
+        .ad-banners{
+            margin-bottom: 16px;
+            .banner-content{
+                .banner-status{
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    
+                    h1{
+                        font-size: 16px;
+                        margin-right: 16px;
+                        p{
+                            font-size: 12px;
+                        }
+                    }
+                }
+                .banner-actions{
+                    a{
+                        width: 34px;
+                        height: 34px;
+                    }
+                }
+            }
+        }
+    }
+}

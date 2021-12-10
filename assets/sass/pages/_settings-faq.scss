@@ -1,0 +1,254 @@
+#addCategory, #addFaq{
+    .modal-header{
+        .suspend-btn-wrapper{
+            h1{ 
+                text-transform: uppercase;
+                font-family: Barlow;
+                font-size: 16px;
+                font-weight: bold;
+                color: rgba(0, 0, 0, 0.3);
+            }
+        }
+    }
+
+    .modal-body{
+        .edit-categories{
+            display: flex;
+            flex-direction: column;
+            padding-left: 16px;
+            margin-top: 16px;
+            margin-bottom: 16px;
+            .cat-heading{
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 16px;
+                h1{ 
+                    font-family: Barlow;
+                    font-size: 16px;
+                    font-weight: bold;
+                    color: #000000;
+                }
+                h2{ 
+                    font-family: Barlow;
+                    font-size: 16px;
+                    font-weight: normal;
+                    color: rgba(0, 0, 0, 0.3);
+                }
+            }
+            .search-box-wrapper{
+                margin-top: 16px;
+                margin-bottom: 16px;
+                .search-box{
+                    li{
+                        width: 100%;
+                        .search-input{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+            #add-cat-btn{
+                margin-top: 16px;
+                margin-bottom: 16px;
+                width: 100%;
+                height: 48px;
+                border: 0px;
+                border-radius: 5px;
+                background-color: rgba(0, 0, 0, 0.2);
+                font-size: 16px;
+                font-weight: bold;
+                color: #ffffff;
+            }
+        }
+
+        .cat-lists{
+            padding-left: 16px;
+            .cat-list-item{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 45px;
+                
+                .cat-name{
+                    width:50%;
+                    display: flex;
+                    align-items: center;
+                    i{  
+                        margin-right: 20px;
+                    }
+                    p{
+                        font-size: 18px;
+                        font-weight: 600;
+                        color: #000000;
+                    }
+                    .cat-icon-style{
+                        color: rgba(0, 0, 0, 0.12);
+                        font-weight: bold;
+                    }
+                }
+
+                .cat-actions{
+                    width: 40%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    img{
+                        width:22px;
+                        height: 22px;
+                    }
+                    label{
+                        margin-bottom: 0px;
+                    }
+                }
+            }
+        }
+    }
+
+    .modal-footer{
+        border-top: 0;
+        padding: 0 0 0 16px;
+        #save-cat-btn{
+            width: 100%;
+            height: 48px;
+            border: 0px;
+            border-radius: 5px;
+            background-color: #f21c47;
+            font-size: 16px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+    }
+}
+
+
+
+#addFaq, #addBanner{
+    .modal-body{
+        .dropdown{
+            width: 100%;
+            height: 51px;
+            padding-left: 16px;
+            margin-bottom: 32px;
+            #drop-btn{
+                width: 100%;
+                height: 100%;
+                border-radius: 6px;
+                border: solid 1px rgba(0, 0, 0, 0.1);
+                background-color: #ffffff;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding-left: 16px;
+                padding-right: 16px;
+                font-size: 16px;
+                font-weight: 600;
+                color: rgba(0, 0, 0, 0.3);
+            }
+            #drop-btn::after{
+                display: none;
+            }
+
+            .dropdown-menu{
+                width: 100%;
+                padding: 0;
+                margin: 0;
+                .dropdown-item{
+                    padding: 16px 20px;
+                    font-family: Barlow;
+                    font-size: 16px;
+                    font-weight: 600;
+                    color: rgba(0, 0, 0, 0.3);
+                }
+            }
+        }
+
+        .faq-content{
+            padding-left: 16px;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 32px;
+            label{
+                font-family: Barlow;
+                font-size: 16px;
+                font-weight: bold;
+                color: #000000;
+                margin-bottom: 16px;
+            }
+
+            .faq-desc{
+                border-radius: 6px;
+                border: solid 1px rgba(0, 0, 0, 0.1);
+                background-color: #ffffff;
+                height: 80px;
+                padding: 16px;
+                font-family: Barlow;
+                font-size: 16px;
+                font-weight: normal;
+                line-height: 1.25;
+                color: #000000;
+            }
+        }
+    }
+
+    .modal-footer{
+        border-top: 0;
+        padding: 0 0 0 16px;
+        #add-faq-btn{
+            width: 100%;
+            height: 48px;
+            border: 0px;
+            border-radius: 5px;
+            background-color: #380e79;
+            font-size: 16px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+    }
+}
+
+
+// Screen Size Smaller Than & Equal To 1350px //
+@media screen and (max-width: 1350px ){
+    #faq-page{
+        #settings-table{
+            .thead-light{
+                .t-row{
+                    .tbl-head{
+                        font-size: 14px !important;
+                    }
+                    .tbl-head:nth-child(4){
+                        width: 250px;
+                    }
+                }
+                
+            }
+            tbody{
+                .tbl-data{
+                    font-size: 14px !important;
+                }
+                .actions{
+                    width:80px !important;
+                    height: 112px;
+                }
+            }
+        }
+    }
+}
+
+// Screen Size Smaller Than & Equal To 768px //
+@media screen and (max-width: 768px ){
+    #faq-page{
+        .user-menu-wrapper{
+            div{
+                margin-bottom: 10px;
+            }
+            #add-btn{
+                button{
+                    margin-left: 4px;
+                    width: 115px !important;
+                    font-size: 12px !important;
+                }
+            }
+        }
+    }
+}

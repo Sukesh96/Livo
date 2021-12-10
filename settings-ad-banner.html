@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banner Ad</title>
+    <!-- Boostrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+</head>
+
+<body>
+
+    <div class="sidenav-wrapper">
+        <div class="logo-wrapper">
+            <a href="./dashboard.html"><img src="assets/images/logo/Logo.svg" alt=""></a>
+        </div>
+
+        <ul class="menu-option-wrapper">
+            <li class="menu-item-wrapper">
+                <a href="dashboard.html" class="menu-item">
+                    <span class="dashboard-bg"></span>
+                    <span class="dot"></span>
+                </a>
+            </li>
+            <li class="menu-item-wrapper">
+                <a href="all-user.html" class="menu-item">
+                    <span class="user-bg"></span>
+                    <span class="dot"></span>
+                </a>
+            </li>
+            <li class="menu-item-wrapper ">
+                <a href="listings.html" class="menu-item">
+                    <span class="list-bg"></span>
+                    <span class="dot"></span>
+                </a>
+            </li>
+            <li class="menu-item-wrapper ">
+                <a href="support.html" class="menu-item">
+                    <span class="support-bg"></span>
+                    <span class="dot"></span>
+                </a>
+            </li>
+            <li class="menu-item-wrapper active">
+                <a href="settings.html" class="menu-item">
+                    <span class="setting-bg"></span>
+                    <span class="dot"></span>
+                </a>
+            </li>
+        </ul>
+        <ul class="menu-option-wrapper logout-btn-wrapper">
+            <li class="menu-item-wrapper ">
+                <a href="#" class="menu-item">
+                    <span class="logout-bg"></span>
+                
+                </a>
+            </li>
+        </ul>
+    </div>
+
+
+    <div class="main-content-wrapper ">
+        <!-- Dashboard Top Menu Section -->
+        <div class="dashborad-top-menu-wrapper  d-flex justify-content-between">
+            <div class="welcome-msg-wrapper">
+                <h4 class="user-name">Settings</h4>
+            </div>
+            <div class="search-box-wrapper">
+                <ul class="search-box">
+                    <li>
+                        <input type="search" class="search-input input-field" placeholder="Search">
+                    </li>
+                    <li>
+                        <a href="#" class="notification-icon">
+                            <i class="fa fa-bell-o " aria-hidden="true"></i>
+                            <span class="dot"></span>
+                        </a>
+                    </li>
+                    <li>
+                    <a href="#" class="user-profile">
+                        <div class="profile-img">
+                            <img src="assets/images/user-profile.png" alt="" class="rounded-circle">
+                        </div>
+                        <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                    </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Dashboard Main Section -->
+        <section class="dashboard-status-card-wrapper">
+
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="dashboard-left-col">
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                              <a class="nav-link" href="./settings.html">Coupons</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="./settings-faq.html">FAQ</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="./settings-legal.html">Legal</a>
+                            </li>
+                            <li class="nav-item nav-active">
+                              <a class="nav-link" href="./settings-ad-banner.html">Ad Banners</a>
+                            </li>
+                          </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-10">
+                    <div class="dashboard-right-col" id="banner-page">
+
+                        <ul class="user-menu-wrapper">
+                            <div>
+                                <li class="menu-itme">
+                                    <a href="" class="menu active">
+                                    Show All
+                                    </a>
+                                </li>
+                                <li class="menu-itme ">
+                                    <a href="" class="menu ">
+                                    Active (03)
+                                    </a>
+                                </li>
+                                <li class="menu-itme">
+                                    <a href="" class="menu">
+                                    Disabled (17)
+                                    </a>
+                                </li>
+                                <li class="menu-itme">
+                                    <a href="" class="menu">
+                                    Upcoming (04)
+                                    </a>
+                                </li>
+                            </div>
+                            <div id="add-btn">
+                                <button type="button" data-toggle="modal" data-target="#addBanner">Add New Banner</button>
+                            </div>
+                        </ul>
+
+                        <div class="status-card-wrapper">
+                            <div class="row">
+
+                                <div class="col-sm-6 col-lg-3">
+                                    <div class="ad-banners">
+                                        <div class="banner-img">
+                                            <img src="./assets/images/banners/A.png" alt="">
+                                        </div>
+                                        
+                                        <div class="banner-content">
+                                            <div class="banner-status">
+                                                <h1>Active</h1>
+                                                <label class="switch">
+                                                    <input type="checkbox">
+                                                    <span class="slider round"></span>
+                                                </label>
+                                            </div>
+
+                                            <div class="banner-actions">
+                                                <a href="#"><img src="./assets/images/icons/Icon-feather-edit-3.svg" alt=""></a>
+                                                <a href="#"><img src="./assets/images/icons/Icon-feather-trash-2.svg" alt=""></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6 col-lg-3">
+                                    <div class="ad-banners">
+                                        <div class="banner-img">
+                                            <img src="./assets/images/banners/W.png" alt="">
+                                        </div>
+                                        
+                                        <div class="banner-content">
+                                            <div class="banner-status">
+                                                <h1>Upcoming
+                                                    <p>23:39:12:42</p>
+                                                </h1>
+                                            </div>
+
+                                            <div class="banner-actions">
+                                                <a href="#"><img src="./assets/images/icons/Icon-feather-edit-3.svg" alt=""></a>
+                                                <a href="#"><img src="./assets/images/icons/Icon-feather-trash-2.svg" alt=""></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6 col-lg-3">
+                                    <div class="ad-banners">
+                                        <div class="banner-img">
+                                            <img src="./assets/images/banners/R.png" alt="">
+                                        </div>
+                                        
+                                        <div class="banner-content">
+                                            <div class="banner-status">
+                                                <h1>Disabled</h1>
+                                                <label class="switch">
+                                                    <input type="checkbox">
+                                                    <span class="slider round"></span>
+                                                </label>
+                                            </div>
+
+                                            <div class="banner-actions">
+                                                <a href="#"><img src="./assets/images/icons/Icon-feather-edit-3.svg" alt=""></a>
+                                                <a href="#"><img src="./assets/images/icons/Icon-feather-trash-2.svg" alt=""></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6 col-lg-3">
+                                    <div class="ad-banners">
+                                        <div class="banner-img">
+                                            <img src="./assets/images/banners/G.png" alt="">
+                                        </div>
+                                        
+                                        <div class="banner-content">
+                                            <div class="banner-status">
+                                                <h1>Active</h1>
+                                                <label class="switch">
+                                                    <input type="checkbox">
+                                                    <span class="slider round"></span>
+                                                </label>
+                                            </div>
+
+                                            <div class="banner-actions">
+                                                <a href="#"><img src="./assets/images/icons/Icon-feather-edit-3.svg" alt=""></a>
+                                                <a href="#"><img src="./assets/images/icons/Icon-feather-trash-2.svg" alt=""></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Modal -->
+<div class="modal right fade user-modal-wrapper modal-pedding" id="addBanner" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+  
+        <div class="modal-header d-flex justify-content-between">
+            <div class="close-btn-werapper">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <!-- <i class="fa fa-arrow-left" aria-hidden="true"></i> -->
+                    <img src="./assets/images/icons/left-arrow.svg" alt="">
+                </button>
+            </div>
+            <div class="suspend-btn-wrapper">
+                <button>Delete</button>
+            </div>
+        </div>
+  
+        <div class="modal-body">
+            <div class="add-banner-content">
+                <h1>Upload Image</h1>
+                <div class="upload-banner-img">
+                    <img src="./assets/images/banners/A.png" alt="">
+                </div>
+                
+                <label for="upload-btn" class="img-upload">
+                    <input type="file" id="upload-btn">
+                    Upload
+                </label>
+
+                <div class="status">
+                    <h1>Mark as activate</h1>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="add-banner-publish-date">
+                <div class="status">
+                    <h1>Upcoming Timer</h1>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+
+                <div class="dropdown" style="padding-left: 0;">
+                    <button type="button" class="dropdown-toggle" data-toggle="dropdown" id="drop-btn">
+                    Select Action
+                    <img src="./assets/images/icons/chevron-down.svg" alt="">
+                    </button>
+                    <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Action 1</a>
+                    <a class="dropdown-item" href="#">Action 2</a>
+                    <a class="dropdown-item" href="#">Action 3</a>
+                    </div>
+                </div>
+
+                <div class="banner-date-time">
+                    <div class="dropdown" style="padding-left: 0;width: 45%;">
+                        <label for="">Enter Date</label>
+                        <button type="button" class="dropdown-toggle" data-toggle="dropdown" id="drop-btn">
+                        Select Action
+                        <img src="./assets/images/icons/chevron-down.svg" alt="">
+                        </button>
+                        <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Action 1</a>
+                        <a class="dropdown-item" href="#">Action 2</a>
+                        <a class="dropdown-item" href="#">Action 3</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown" style="padding-left: 0;width: 45%;">
+                        <label for="">Enter Time</label>
+                        <button type="button" class="dropdown-toggle" data-toggle="dropdown" id="drop-btn">
+                        Select Action
+                        <img src="./assets/images/icons/chevron-down.svg" alt="">
+                        </button>
+                        <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Action 1</a>
+                        <a class="dropdown-item" href="#">Action 2</a>
+                        <a class="dropdown-item" href="#">Action 3</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="banner-publish-btn">
+            <button type="button">Publish Banner Ad</button>
+        </div>
+  
+      </div><!-- modal-content -->
+    </div><!-- modal-dialog -->
+  </div><!-- modal -->
+
+</body>
+</html>

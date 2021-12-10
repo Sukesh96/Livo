@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transport Request Ticket</title>
+    
+    <!-- Boostrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+    crossorigin="anonymous" />
+
+    <!-- Bootstrap JS -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+</head>
+
+<body>
+
+    <!-- Side Navbar Start-->
+    <div class="sidenav-wrapper">
+        <div class="logo-wrapper">
+            <a href="./dashboard.html"><img src="assets/images/logo/Logo.svg" alt=""></a>
+        </div>
+
+        <ul class="menu-option-wrapper">
+            <li class="menu-item-wrapper ">
+                <a href="dashboard.html" class="menu-item">
+                    <span class="dashboard-bg"></span>
+                    <span class="dot"></span>
+                </a>
+            </li>
+            <li class="menu-item-wrapper  ">
+                <a href="all-user.html" class="menu-item">
+                    <span class="user-bg"></span>
+                    <span class="dot"></span>
+                </a>
+            </li>
+            <li class="menu-item-wrapper ">
+                <a href="listings.html" class="menu-item">
+                    <span class="list-bg"></span>
+                    <span class="dot"></span>
+                </a>
+            </li>
+            <li class="menu-item-wrapper active">
+                <a href="support.html" class="menu-item">
+                    <span class="support-bg"></span>
+                    <span class="dot"></span>
+                </a>
+            </li>
+            <li class="menu-item-wrapper ">
+                <a href="settings.html" class="menu-item">
+                    <span class="setting-bg"></span>
+                    <span class="dot"></span>
+                </a>
+            </li>
+            </ul>
+            <ul class="menu-option-wrapper logout-btn-wrapper">
+            <li class="menu-item-wrapper ">
+                <a href="#" class="menu-item">
+                    <span class="logout-bg"></span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- Side Navbar End -->
+
+
+    <!-- Main Content Start -->
+    <div class="main-content-wrapper ">
+        <!-- Top Menu Start -->
+        <div class="dashborad-top-menu-wrapper  d-flex justify-content-between">
+            <section class="dashboard-status-card-wrapper ">
+                <div class="row">
+                    <div class="col-md-12 pr-0">
+                        <ul class="user-menu-wrapper">
+                            <li class="menu-itme ">
+                                <a href="./support.html" class="menu">
+                                    Show All
+                                </a>
+                            </li>
+                            <li class="menu-itme ">
+                                <a href="ongoing.html" class="menu ">
+                                    Pending
+                                </a>
+                            </li>
+                            <li class="menu-itme">
+                                <a href="completed.html" class="menu">
+                                    Processing
+                                </a>
+                            </li>
+                            <li class="menu-itme">
+                                <a href="completed.html" class="menu">
+                                    Resolved
+                                </a>
+                            </li>
+                            <li class="menu-itme">
+                                <a href="completed.html" class="menu">
+                                    Failed Only
+                                </a>
+                            </li>
+                            <li class="menu-itme" id="transporter-menu">
+                                <a href="./support-transporter-request.html" class="menu active">
+                                    Transporter Request
+                                </a>
+                            </li>
+                        </ul>                        
+                    </div>
+                </div>
+            </section>
+
+            <div class="search-box-wrapper">
+                <ul class="search-box">
+                    
+                    <li>
+                        <a href="#" class="notification-icon">
+                            <i class="fa fa-bell-o " aria-hidden="true"></i>
+                            <span class="dot"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="user-profile">
+                            <div class="profile-img">
+                                <img src="assets/images/user-profile.png" alt="" class="rounded-circle">
+                            </div>
+                            <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <!-- Top Menu End -->
+
+
+        <div class="dashboard-support-list">
+            <div class="row">
+                <!-- Column 1 -->
+                <div class="col-md-3">
+                    <h1 class="support-ticket-heading">Support Tickets</h1>
+                    <div class="support-tickets custom-h over-flow-scroll">
+                        
+                        <ul class="support-ticket-list">
+                            <li class="support-ticket-list-item">
+                                <div class="ticket-details">
+                                    <div class="ticket-no">
+                                        <h1>Ticket No.</h1>
+                                        <h2>#126</h2>
+                                    </div>
+                                    <p>21st Sept. 2020 at 09:30pm</p>
+                                </div>
+
+                                <div class="category-details">
+                                    <div class="category-desc">
+                                        <h1>Category</h1>
+                                        <h2>Issues with Listing</h2>
+                                    </div>
+                                    <div class="select-wrapper">
+                                        <div class="select">
+                                            <div class="select__trigger">Escalated
+                                                <!-- <div class="arrow"></div> -->
+                                            </div>
+                                            <div class="options">
+                                                <span class="option selected" data-value="Escalated">Escalated</span>
+                                                <span class="option" data-value="Pending">Pending</span>
+                                                <span class="option" data-value="Failed">Failed</span>
+                                                <span class="option" data-value="Resolved">Resolved</span>
+                                            </div>
+                                            <img src="./assets/images/icons/chevron-down.svg" alt="">
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="support-ticket-list-item">
+                                <div class="ticket-details">
+                                    <div class="ticket-no">
+                                        <h1>Ticket No.</h1>
+                                        <h2>#126</h2>
+                                    </div>
+                                    <p>21st Sept. 2020 at 09:30pm</p>
+                                </div>
+
+                                <div class="category-details">
+                                    <div class="category-desc">
+                                        <h1>Category</h1>
+                                        <h2>Issues with Listing</h2>
+                                    </div>
+                                    <div class="select-wrapper">
+                                        <div class="select">
+                                            <div class="select__trigger">Escalated
+                                                <!-- <div class="arrow"></div> -->
+                                            </div>
+                                            <div class="options">
+                                                <span class="option selected" data-value="Escalated">Escalated</span>
+                                                <span class="option" data-value="Pending">Pending</span>
+                                                <span class="option" data-value="Failed">Failed</span>
+                                                <span class="option" data-value="Resolved">Resolved</span>
+                                            </div>
+                                            <img src="./assets/images/icons/chevron-down.svg" alt="">
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="support-ticket-list-item">
+                                <div class="ticket-details">
+                                    <div class="ticket-no">
+                                        <h1>Ticket No.</h1>
+                                        <h2>#126</h2>
+                                    </div>
+                                    <p>21st Sept. 2020 at 09:30pm</p>
+                                </div>
+
+                                <div class="category-details">
+                                    <div class="category-desc">
+                                        <h1>Category</h1>
+                                        <h2>Issues with Listing</h2>
+                                    </div>
+                                    <div class="select-wrapper">
+                                        <div class="select">
+                                            <div class="select__trigger">Escalated
+                                                <!-- <div class="arrow"></div> -->
+                                            </div>
+                                            <div class="options">
+                                                <span class="option selected" data-value="Escalated">Escalated</span>
+                                                <span class="option" data-value="Pending">Pending</span>
+                                                <span class="option" data-value="Failed">Failed</span>
+                                                <span class="option" data-value="Resolved">Resolved</span>
+                                            </div>
+                                            <img src="./assets/images/icons/chevron-down.svg" alt="">
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="support-ticket-list-item">
+                                <div class="ticket-details">
+                                    <div class="ticket-no">
+                                        <h1>Ticket No.</h1>
+                                        <h2>#126</h2>
+                                    </div>
+                                    <p>21st Sept. 2020 at 09:30pm</p>
+                                </div>
+
+                                <div class="category-details">
+                                    <div class="category-desc">
+                                        <h1>Category</h1>
+                                        <h2>Issues with Listing</h2>
+                                    </div>
+                                    <div class="select-wrapper">
+                                        <div class="select">
+                                            <div class="select__trigger">Escalated
+                                                <!-- <div class="arrow"></div> -->
+                                            </div>
+                                            <div class="options">
+                                                <span class="option selected" data-value="Escalated">Escalated</span>
+                                                <span class="option" data-value="Pending">Pending</span>
+                                                <span class="option" data-value="Failed">Failed</span>
+                                                <span class="option" data-value="Resolved">Resolved</span>
+                                            </div>
+                                            <img src="./assets/images/icons/chevron-down.svg" alt="">
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="support-ticket-list-item">
+                                <div class="ticket-details">
+                                    <div class="ticket-no">
+                                        <h1>Ticket No.</h1>
+                                        <h2>#126</h2>
+                                    </div>
+                                    <p>21st Sept. 2020 at 09:30pm</p>
+                                </div>
+
+                                <div class="category-details">
+                                    <div class="category-desc">
+                                        <h1>Category</h1>
+                                        <h2>Issues with Listing</h2>
+                                    </div>
+                                    <div class="select-wrapper">
+                                        <div class="select">
+                                            <div class="select__trigger">Escalated
+                                                <!-- <div class="arrow"></div> -->
+                                            </div>
+                                            <div class="options">
+                                                <span class="option selected" data-value="Escalated">Escalated</span>
+                                                <span class="option" data-value="Pending">Pending</span>
+                                                <span class="option" data-value="Failed">Failed</span>
+                                                <span class="option" data-value="Resolved">Resolved</span>
+                                            </div>
+                                            <img src="./assets/images/icons/chevron-down.svg" alt="">
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="support-ticket-list-item">
+                                <div class="ticket-details">
+                                    <div class="ticket-no">
+                                        <h1>Ticket No.</h1>
+                                        <h2>#126</h2>
+                                    </div>
+                                    <p>21st Sept. 2020 at 09:30pm</p>
+                                </div>
+
+                                <div class="category-details">
+                                    <div class="category-desc">
+                                        <h1>Category</h1>
+                                        <h2>Issues with Listing</h2>
+                                    </div>
+                                    <div class="select-wrapper">
+                                        <div class="select">
+                                            <div class="select__trigger">Escalated
+                                                <!-- <div class="arrow"></div> -->
+                                            </div>
+                                            <div class="options">
+                                                <span class="option selected" data-value="Escalated">Escalated</span>
+                                                <span class="option" data-value="Pending">Pending</span>
+                                                <span class="option" data-value="Failed">Failed</span>
+                                                <span class="option" data-value="Resolved">Resolved</span>
+                                            </div>
+                                            <img src="./assets/images/icons/chevron-down.svg" alt="">
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="support-ticket-list-item">
+                                <div class="ticket-details">
+                                    <div class="ticket-no">
+                                        <h1>Ticket No.</h1>
+                                        <h2>#126</h2>
+                                    </div>
+                                    <p>21st Sept. 2020 at 09:30pm</p>
+                                </div>
+
+                                <div class="category-details">
+                                    <div class="category-desc">
+                                        <h1>Category</h1>
+                                        <h2>Issues with Listing</h2>
+                                    </div>
+                                    <div class="select-wrapper">
+                                        <div class="select">
+                                            <div class="select__trigger">Escalated
+                                                <!-- <div class="arrow"></div> -->
+                                            </div>
+                                            <div class="options">
+                                                <span class="option selected" data-value="Escalated">Escalated</span>
+                                                <span class="option" data-value="Pending">Pending</span>
+                                                <span class="option" data-value="Failed">Failed</span>
+                                                <span class="option" data-value="Resolved">Resolved</span>
+                                            </div>
+                                            <img src="./assets/images/icons/chevron-down.svg" alt="">
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="support-ticket-list-item">
+                                <div class="ticket-details">
+                                    <div class="ticket-no">
+                                        <h1>Ticket No.</h1>
+                                        <h2>#126</h2>
+                                    </div>
+                                    <p>21st Sept. 2020 at 09:30pm</p>
+                                </div>
+
+                                <div class="category-details">
+                                    <div class="category-desc">
+                                        <h1>Category</h1>
+                                        <h2>Issues with Listing</h2>
+                                    </div>
+                                    <div class="select-wrapper">
+                                        <div class="select">
+                                            <div class="select__trigger">Escalated
+                                                <!-- <div class="arrow"></div> -->
+                                            </div>
+                                            <div class="options">
+                                                <span class="option selected" data-value="Escalated">Escalated</span>
+                                                <span class="option" data-value="Pending">Pending</span>
+                                                <span class="option" data-value="Failed">Failed</span>
+                                                <span class="option" data-value="Resolved">Resolved</span>
+                                            </div>
+                                            <img src="./assets/images/icons/chevron-down.svg" alt="">
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <!-- Column 2 -->
+                <div class="col-md-3">
+                    <h1 class="user-details-heading">Driver Profile</h1>
+                    <div class="user-detail-column custom-h over-flow-scroll">
+                        <div class="user-details">
+                            <div class="sender">
+                                <div class="driver-details">
+                                    <div class="driver-image">
+                                        <img src="./assets/images/Rectangle-5334.png" alt="">
+                                    </div>
+                                    
+                                    <div class="driver-name">
+                                        <div>
+                                            <h1>First Name</h1>
+                                            <h2>Morten</h2>
+                                        </div>
+                                        <div>
+                                            <h1>Last Name</h1>
+                                            <h2>Skovgaard</h2>
+                                        </div>
+                                        <div>
+                                            <h1>Gender</h1>
+                                            <h2>Male</h2>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="driver-content">
+                                <div class="driver-info">
+                                    <div class="dob-info">
+                                        <h1>Date of Birth</h1>
+                                        <h2>01/01/1990</h2>
+                                    </div>
+                                    <div class="phn-num">
+                                        <h1>Phone Number</h1>
+                                        <h2><span>+45</span> 1234 123 432</h2>
+                                    </div>
+                                </div>
+
+                                <div class="driver-info">
+                                    <div class="email-info">
+                                        <h1>Email</h1>
+                                        <h2>morten@livo.nu</h2>
+                                    </div>
+                                    <div class="stats">
+                                        <h1>User Type</h1>
+                                        <h2>Individual</h2>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                   
+                        <h1 class="status-heading">Application Status</h1>
+                        <div class="status">
+                            <ul class="status-list">
+                                <li class="status-list-item selected">
+                                    <div class="circle">
+                                        <div class="dot"></div>
+                                    </div>
+                                    Profile details completed
+                                </li>
+
+                                <li class="status-list-item approved">
+                                    <div class="circle">
+                                        <div class="dot"></div>
+                                    </div>
+                                    Document Verification
+                                </li>
+
+                                <li class="status-list-item">
+                                    <div class="circle">
+                                        <div class="dot"></div>
+                                    </div>
+                                    Live Interview
+                                </li>
+
+                                <li class="status-list-item">
+                                    <div class="circle">
+                                        <div class="dot"></div>
+                                    </div>
+                                    Approve / Reject Transporter
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                     
+                </div>
+
+                <!-- Column 3-->
+                <div class="col-md-3">
+                    <h1 class="listing-details-heading">Transporter Application</h1>
+                    <div class="transport-app custom-h over-flow-scroll">
+                        <div class="select-option">
+                            <a href="#">Reject</a>
+                            <a href="#">Approve</a>
+                        </div>
+
+                        
+                        <div class="img-box">
+                            <img src="./assets/images/Rectangle4966.png" alt="">
+                        </div>
+                        
+                        <div class="request">
+                            <div class="request-details">
+                                <h1>Request Attempts</h1>
+                                <p>01</p>
+                            </div>
+                            <div class="request-details">
+                                <h1>Request Date</h1>
+                                <p>2nd Nov</p>
+                            </div>
+                        </div>
+
+                        <div class="product-info">
+                            <div class="sender">
+                                <div class="vehicle-details">
+                                    <div class="vehicle-image">
+                                        <img src="./assets/images/product-img/Rectangle-5337.png" alt="">
+                                    </div>
+                                    
+                                    <div class="driver-name">
+                                        <div class="vehicle-info">
+                                            <h1>Select Vehicle Type</h1>
+                                            <h2>Hatchback Car</h2>
+                                        </div>
+                                        <div class="vehicle-info">
+                                            <h1>License Plate Number</h1>
+                                            <h2>XXX - XXX - XXX</h2>
+                                        </div>
+                                        <div class="vehicle-info">
+                                            <h1>CPR (Personal ID Number)</h1>
+                                            <h2>XXX - XXXX - XX</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="driver-content">
+                                <div class="driver-info">
+                                    <div class="dob-info">
+                                        <h1>Bank Account Info</h1>
+                                        <h2>4312 4433 6425 32442</h2>
+                                    </div>
+                                    <div class="phn-num">
+                                        <h1>Registration Number</h1>
+                                        <h2>XXX - XXXX - XXX</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="about-driver">
+                            <h1>About Driver</h1>
+                            <p> 
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+                                sed diam nonumy eirmod tempor invidunt ut labore et dolore 
+                                magna aliquyam erat, sed diam
+                            </p>
+                        </div>
+                        
+
+                    </div>
+                    
+                </div>
+
+                <!-- Column 4 -->
+                <div class="col-md-3">
+                    <h1 class="message-heading">Message</h1>
+                    <div class="pre-order-message-wrapper custom-h over-flow-scroll">
+                        
+                        <div class="right-site-message-wrapper">
+                            <div class="message-wrapper">
+
+                                <div class="message-notification">
+                                    <h4>Yesterday : 03:50 PM</h4>
+                                    <p>
+                                        <strong>Evan</strong> has made offer of <strong>300 Kr</strong> for your listing.
+                                        Reply here to start a conversation with Evan.
+                                    </p>
+                                </div>
+
+
+                                <div class="msg-box-wrapper receiver-wrapper">    
+                                    <div class="msg-wrapper">
+                                        <p>
+                                            Hello Evan.
+                                            Thanks for the offer
+                                        </p>
+                                    </div>
+                                    <span class="msg-time">8:15 PM</span>
+                                </div>
+
+                                <div class="msg-box-wrapper receiver-wrapper ">        
+                                    <div class="msg-wrapper">
+                                        <p>
+                                            I need this guitar to delivered in
+                                            the coming week. 
+                                            Would you be able to delivery it by 
+                                            Monday ?
+                                        </p>
+                                    </div>
+                                    <span class="msg-time">8:15 PM</span>
+                                </div>
+                                
+                                <div class="msg-box-wrapper sender-wrapper">
+                                    <div class="msg-wrapper">
+                                        <p> 
+                                            Hi Jannik,
+                                            Yes I’ll be making a pickup run on Friday and drop-off run on Sunday.
+                                        </p>
+                                    </div>
+                                    <span class="msg-time">8:15 PM</span>
+                                </div>
+
+                                <div class="msg-box-wrapper sender-wrapper ">    
+                                    <div class="msg-wrapper">
+                                        <p>
+                                            Thanks,
+                                            That’d be good.
+                                        </p>
+                                    </div>
+                                    <span class="msg-time">8:15 PM</span>
+                                </div>
+
+                                <div class="msg-box-wrapper receiver-wrapper ">
+                                    <div class="msg-wrapper">
+                                        <p>
+                                            I need this guitar to delivered in
+                                            the coming week. 
+                                            Would you be able to delivery it by 
+                                            Monday ?
+                                        </p>
+                                    </div>
+                                    <span class="msg-time">8:15 PM</span>
+                                </div>
+
+
+                            </div>
+
+                            <div class="msg-type-box-wrapper align-items-center">
+                                <!-- <div class="user-icon">
+                                <img src="assets/images/user-profile.png" alt="">
+                                </div> -->
+                                <div class="input-type-box">
+                                    <input type="text ">
+                                    <label for="select-file" class="msg-select-file">
+                                        <input type="file" class="image-icon" id="select-file">
+                                        <i class="fa fa-camera" style="font-size:24px;color: #fff;"></i>
+                                    </label>
+                                </div>
+
+                                <!-- <div class="msg-send-btn-wrapper">
+                                    <button class="msg-send-btn"></button>
+                                </div> -->
+                            </div>
+                        </div>
+                            
+                    </div>
+                    
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="assets/js/custom.js"></script>
+
+</body>
+</html>
